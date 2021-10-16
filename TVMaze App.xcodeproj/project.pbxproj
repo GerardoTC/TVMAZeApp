@@ -83,7 +83,7 @@
 		0E73F90D271B09710031DFC0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0E73F90E271B09820031DFC0 /* ShowsSearch */,
+				0E73F91A271B0A4D0031DFC0 /* Shows */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -95,6 +95,14 @@
 				0E7F09F9271A8A7D00E5162A /* ShowsSearch.storyboard */,
 			);
 			path = ShowsSearch;
+			sourceTree = "<group>";
+		};
+		0E73F91A271B0A4D0031DFC0 /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				0E73F90E271B09820031DFC0 /* ShowsSearch */,
+			);
+			path = Shows;
 			sourceTree = "<group>";
 		};
 		0E7F09E7271A8A7C00E5162A = {
