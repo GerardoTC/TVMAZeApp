@@ -35,6 +35,14 @@
 		0EDA4969271B26FD00C942D9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA4968271B26FD00C942D9 /* UIView+Extensions.swift */; };
 		0EDA49BA271B29DC00C942D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA49B9271B29DC00C942D9 /* Localizable.strings */; };
 		0EDA49BF271B2A1300C942D9 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA49BE271B2A1300C942D9 /* String+Localizable.swift */; };
+		0EDA49C5271B384400C942D9 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA49C4271B384400C942D9 /* BaseAPI.swift */; };
+		0EDA49CF271B3D5B00C942D9 /* BaseAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA49CE271B3D5B00C942D9 /* BaseAPIConfig.swift */; };
+		0EDA49D4271B40F000C942D9 /* MazeEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA49D3271B40F000C942D9 /* MazeEndpoints.swift */; };
+		0EDA49DB271B443A00C942D9 /* BaseAPIMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA49DA271B443A00C942D9 /* BaseAPIMethods.swift */; };
+		0EDA49E3271B447800C942D9 /* MazeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA49E2271B447800C942D9 /* MazeAPI.swift */; };
+		0EDA49EB271B45F600C942D9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA49EA271B45F600C942D9 /* NetworkError.swift */; };
+		0EDA49F5271B4BEA00C942D9 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA49F4271B4BEA00C942D9 /* Codable+Extensions.swift */; };
+		0EDA49FA271B4C3300C942D9 /* ShowInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA49F9271B4C3300C942D9 /* ShowInfoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +97,14 @@
 		0EDA4968271B26FD00C942D9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0EDA49B9271B29DC00C942D9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		0EDA49BE271B2A1300C942D9 /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		0EDA49C4271B384400C942D9 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		0EDA49CE271B3D5B00C942D9 /* BaseAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIConfig.swift; sourceTree = "<group>"; };
+		0EDA49D3271B40F000C942D9 /* MazeEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeEndpoints.swift; sourceTree = "<group>"; };
+		0EDA49DA271B443A00C942D9 /* BaseAPIMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIMethods.swift; sourceTree = "<group>"; };
+		0EDA49E2271B447800C942D9 /* MazeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeAPI.swift; sourceTree = "<group>"; };
+		0EDA49EA271B45F600C942D9 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0EDA49F4271B4BEA00C942D9 /* Codable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extensions.swift"; sourceTree = "<group>"; };
+		0EDA49F9271B4C3300C942D9 /* ShowInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInfoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +173,8 @@
 		0E73F928271B0CE90031DFC0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0EDA496D271B295500C942D9 /* Localized */,
+				0EDA49F0271B4BD600C942D9 /* Codable */,
+				0EDA496D271B295500C942D9 /* StringLocalized */,
 				0E73F93E271B0DC90031DFC0 /* UIKitExtensions */,
 			);
 			path = Extensions;
@@ -226,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				0E73F90D271B09710031DFC0 /* Modules */,
+				0EDA49C3271B375A00C942D9 /* Networking */,
 				0E73F91F271B0B500031DFC0 /* UIStyle */,
 				0E7F0A65271B058E00E5162A /* Commons */,
 				0E7F09F3271A8A7C00E5162A /* AppDelegate.swift */,
@@ -332,12 +350,58 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
-		0EDA496D271B295500C942D9 /* Localized */ = {
+		0EDA496D271B295500C942D9 /* StringLocalized */ = {
 			isa = PBXGroup;
 			children = (
 				0EDA49BE271B2A1300C942D9 /* String+Localizable.swift */,
 			);
-			path = Localized;
+			path = StringLocalized;
+			sourceTree = "<group>";
+		};
+		0EDA49C3271B375A00C942D9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0EDA49EF271B4B9100C942D9 /* UseCases */,
+				0EDA49D9271B441200C942D9 /* BaseAPI */,
+				0EDA49D8271B440600C942D9 /* MazeAPI */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0EDA49D8271B440600C942D9 /* MazeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0EDA49D3271B40F000C942D9 /* MazeEndpoints.swift */,
+				0EDA49E2271B447800C942D9 /* MazeAPI.swift */,
+			);
+			path = MazeAPI;
+			sourceTree = "<group>";
+		};
+		0EDA49D9271B441200C942D9 /* BaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0EDA49C4271B384400C942D9 /* BaseAPI.swift */,
+				0EDA49CE271B3D5B00C942D9 /* BaseAPIConfig.swift */,
+				0EDA49DA271B443A00C942D9 /* BaseAPIMethods.swift */,
+				0EDA49EA271B45F600C942D9 /* NetworkError.swift */,
+			);
+			path = BaseAPI;
+			sourceTree = "<group>";
+		};
+		0EDA49EF271B4B9100C942D9 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				0EDA49F9271B4C3300C942D9 /* ShowInfoModel.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		0EDA49F0271B4BD600C942D9 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				0EDA49F4271B4BEA00C942D9 /* Codable+Extensions.swift */,
+			);
+			path = Codable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,15 +543,23 @@
 				0E73F92F271B0D3C0031DFC0 /* FontStyle.swift in Sources */,
 				0EDA49BF271B2A1300C942D9 /* String+Localizable.swift in Sources */,
 				0EDA493E271B171A00C942D9 /* ShowsSearchPresenter.swift in Sources */,
+				0EDA49CF271B3D5B00C942D9 /* BaseAPIConfig.swift in Sources */,
+				0EDA49FA271B4C3300C942D9 /* ShowInfoModel.swift in Sources */,
 				0E7F09F4271A8A7C00E5162A /* AppDelegate.swift in Sources */,
+				0EDA49E3271B447800C942D9 /* MazeAPI.swift in Sources */,
 				0E7F09FE271A8A7D00E5162A /* TVMaze_App.xcdatamodeld in Sources */,
 				0E73F957271B121E0031DFC0 /* ShowsSearchViewController.swift in Sources */,
 				0EDA4957271B1C9000C942D9 /* UITableView+Extensions.swift in Sources */,
+				0EDA49DB271B443A00C942D9 /* BaseAPIMethods.swift in Sources */,
+				0EDA49C5271B384400C942D9 /* BaseAPI.swift in Sources */,
+				0EDA49D4271B40F000C942D9 /* MazeEndpoints.swift in Sources */,
 				0E73F92A271B0CFC0031DFC0 /* UIColor+Extensions.swift in Sources */,
 				0EDA4963271B260300C942D9 /* ShowTableViewCell.swift in Sources */,
+				0EDA49F5271B4BEA00C942D9 /* Codable+Extensions.swift in Sources */,
 				0E73F93A271B0DB80031DFC0 /* UILabel+Extensions.swift in Sources */,
 				0E73F924271B0C650031DFC0 /* BaseColorPalette.swift in Sources */,
 				0EDA4969271B26FD00C942D9 /* UIView+Extensions.swift in Sources */,
+				0EDA49EB271B45F600C942D9 /* NetworkError.swift in Sources */,
 				0E73F949271B0FD90031DFC0 /* FontStyleRegister.swift in Sources */,
 				0EDA4940271B171A00C942D9 /* ShowsSearchInteractor.swift in Sources */,
 				0E73F935271B0D690031DFC0 /* UIFont+Extensions.swift in Sources */,
