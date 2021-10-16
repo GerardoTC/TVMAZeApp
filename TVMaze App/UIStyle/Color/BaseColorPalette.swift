@@ -11,19 +11,21 @@ enum BaseColorPalette {
     var color: UIColor {
         switch self {
         case .textColor:
-            return UIColor(named: "textColor") ?? UIColor.colorFrom(hex: "#262223")
+            return UIColor(named: "TextColor") ?? UIColor.colorFrom(hex: "#262223")
         case .textColorSecondary:
-            return UIColor(named: "textColorSecondary") ?? UIColor.colorFrom(hex: "#586173")
+            return UIColor(named: "TextColorSecondary") ?? UIColor.colorFrom(hex: "#586173")
         case .bgColor:
-            return UIColor(named: "bgColor") ?? UIColor.colorFrom(hex: "#FFFFFF")
+            return UIColor(named: "BgColor") ?? UIColor.colorFrom(hex: "#FFFFFF")
         case .bgColorSecondary:
-            return UIColor(named: "bgColorSecondary") ?? UIColor.colorFrom(hex: "#F2F2F2")
+            return UIColor(named: "BgColorSecondary") ?? UIColor.colorFrom(hex: "#F2F2F2")
         case .accentColor:
-            return UIColor(named: "accentColor") ?? UIColor.colorFrom(hex: "#35BDF2")
+            return UIColor(named: "AccentColor") ?? UIColor.colorFrom(hex: "#35BDF2")
         case .tintColor:
-            return UIColor(named: "tintColor") ?? UIColor.colorFrom(hex: "#35BDF2")
+            return UIColor(named: "TintColor") ?? UIColor.colorFrom(hex: "#35BDF2")
         case .tintColorSecondary:
-            return UIColor(named: "tintColorSecondary") ?? UIColor.colorFrom(hex: "#8DD5F2")
+            return UIColor(named: "TintColorSecondary") ?? UIColor.colorFrom(hex: "#8DD5F2")
+        case .clearColor:
+            return UIColor.clear
         }
     }
     /// Hex Value = #262223
@@ -40,4 +42,6 @@ enum BaseColorPalette {
     case tintColor
     /// Hex Value = #8DD5F2
     case tintColorSecondary
+    
+    case clearColor
 }

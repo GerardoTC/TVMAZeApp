@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  TVMaze App
+
+  Created by Gerardo Tarazona Caceres on 16/10/21.
+  
+*/
+"shows.search.search_text" = "Search";
+"shows.search.title" = "TVMaze Search";

@@ -8,8 +8,9 @@
 import UIKit
 
 extension UILabel {
-    func setFont(_ style: FontStyle) {
+    func setFont(_ style: FontStyle, color: BaseColorPalette = .textColor) {
         self.font = style.font
         self.adjustsFontForContentSizeCategory = true
+        self.textColor = color.color
     }
 }
