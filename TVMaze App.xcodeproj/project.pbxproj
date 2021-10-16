@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E73F924271B0C650031DFC0 /* BaseColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73F923271B0C650031DFC0 /* BaseColorPalette.swift */; };
+		0E73F92A271B0CFC0031DFC0 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73F929271B0CFC0031DFC0 /* UIColor+Extensions.swift */; };
+		0E73F92F271B0D3C0031DFC0 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73F92E271B0D3C0031DFC0 /* FontStyle.swift */; };
+		0E73F935271B0D690031DFC0 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73F934271B0D690031DFC0 /* UIFont+Extensions.swift */; };
+		0E73F93A271B0DB80031DFC0 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73F939271B0DB80031DFC0 /* UILabel+Extensions.swift */; };
+		0E73F942271B0F560031DFC0 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E73F940271B0F560031DFC0 /* Montserrat-Regular.ttf */; };
+		0E73F943271B0F560031DFC0 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E73F941271B0F560031DFC0 /* Montserrat-SemiBold.ttf */; };
+		0E73F949271B0FD90031DFC0 /* FontStyleRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73F948271B0FD90031DFC0 /* FontStyleRegister.swift */; };
+		0E73F957271B121E0031DFC0 /* ShowsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73F956271B121E0031DFC0 /* ShowsSearchViewController.swift */; };
 		0E7F09F4271A8A7C00E5162A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F09F3271A8A7C00E5162A /* AppDelegate.swift */; };
-		0E7F09F8271A8A7D00E5162A /* ShowsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F09F7271A8A7D00E5162A /* ShowsSearchViewController.swift */; };
 		0E7F09FB271A8A7D00E5162A /* ShowsSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7F09F9271A8A7D00E5162A /* ShowsSearch.storyboard */; };
 		0E7F09FE271A8A7D00E5162A /* TVMaze_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F09FC271A8A7D00E5162A /* TVMaze_App.xcdatamodeld */; };
 		0E7F0A00271A8A8600E5162A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7F09FF271A8A8600E5162A /* Assets.xcassets */; };
@@ -37,9 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E73F923271B0C650031DFC0 /* BaseColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColorPalette.swift; sourceTree = "<group>"; };
+		0E73F929271B0CFC0031DFC0 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		0E73F92E271B0D3C0031DFC0 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		0E73F934271B0D690031DFC0 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		0E73F939271B0DB80031DFC0 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		0E73F940271B0F560031DFC0 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		0E73F941271B0F560031DFC0 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		0E73F948271B0FD90031DFC0 /* FontStyleRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleRegister.swift; sourceTree = "<group>"; };
+		0E73F956271B121E0031DFC0 /* ShowsSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSearchViewController.swift; sourceTree = "<group>"; };
 		0E7F09F0271A8A7C00E5162A /* TVMaze App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TVMaze App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7F09F3271A8A7C00E5162A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E7F09F7271A8A7D00E5162A /* ShowsSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsSearchViewController.swift; sourceTree = "<group>"; };
 		0E7F09FA271A8A7D00E5162A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShowsSearch.storyboard; sourceTree = "<group>"; };
 		0E7F09FD271A8A7D00E5162A /* TVMaze_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TVMaze_App.xcdatamodel; sourceTree = "<group>"; };
 		0E7F09FF271A8A8600E5162A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +107,7 @@
 		0E73F90E271B09820031DFC0 /* ShowsSearch */ = {
 			isa = PBXGroup;
 			children = (
-				0E7F09F7271A8A7D00E5162A /* ShowsSearchViewController.swift */,
+				0E73F956271B121E0031DFC0 /* ShowsSearchViewController.swift */,
 				0E7F09F9271A8A7D00E5162A /* ShowsSearch.storyboard */,
 			);
 			path = ShowsSearch;
@@ -103,6 +119,60 @@
 				0E73F90E271B09820031DFC0 /* ShowsSearch */,
 			);
 			path = Shows;
+			sourceTree = "<group>";
+		};
+		0E73F91F271B0B500031DFC0 /* UIStyle */ = {
+			isa = PBXGroup;
+			children = (
+				0E73F95B271B12450031DFC0 /* Color */,
+				0E73F93F271B0F2A0031DFC0 /* Font */,
+			);
+			path = UIStyle;
+			sourceTree = "<group>";
+		};
+		0E73F928271B0CE90031DFC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E73F93E271B0DC90031DFC0 /* UIKitExtensions */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0E73F93E271B0DC90031DFC0 /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E73F929271B0CFC0031DFC0 /* UIColor+Extensions.swift */,
+				0E73F934271B0D690031DFC0 /* UIFont+Extensions.swift */,
+				0E73F939271B0DB80031DFC0 /* UILabel+Extensions.swift */,
+			);
+			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		0E73F93F271B0F2A0031DFC0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				0E73F947271B0F620031DFC0 /* ttfFonts */,
+				0E73F92E271B0D3C0031DFC0 /* FontStyle.swift */,
+				0E73F948271B0FD90031DFC0 /* FontStyleRegister.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		0E73F947271B0F620031DFC0 /* ttfFonts */ = {
+			isa = PBXGroup;
+			children = (
+				0E73F940271B0F560031DFC0 /* Montserrat-Regular.ttf */,
+				0E73F941271B0F560031DFC0 /* Montserrat-SemiBold.ttf */,
+			);
+			path = ttfFonts;
+			sourceTree = "<group>";
+		};
+		0E73F95B271B12450031DFC0 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				0E73F923271B0C650031DFC0 /* BaseColorPalette.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 		0E7F09E7271A8A7C00E5162A = {
@@ -129,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				0E73F90D271B09710031DFC0 /* Modules */,
+				0E73F91F271B0B500031DFC0 /* UIStyle */,
 				0E7F0A65271B058E00E5162A /* Commons */,
 				0E7F09F3271A8A7C00E5162A /* AppDelegate.swift */,
 				0E7F09FF271A8A8600E5162A /* Assets.xcassets */,
@@ -160,6 +231,7 @@
 		0E7F0A65271B058E00E5162A /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				0E73F928271B0CE90031DFC0 /* Extensions */,
 				0E7F0A73271B062E00E5162A /* Storyboarded */,
 			);
 			path = Commons;
@@ -277,9 +349,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E73F942271B0F560031DFC0 /* Montserrat-Regular.ttf in Resources */,
 				0E7F0A03271A8A8600E5162A /* LaunchScreen.storyboard in Resources */,
 				0E7F0A00271A8A8600E5162A /* Assets.xcassets in Resources */,
 				0E7F09FB271A8A7D00E5162A /* ShowsSearch.storyboard in Resources */,
+				0E73F943271B0F560031DFC0 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,10 +378,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E7F09F8271A8A7D00E5162A /* ShowsSearchViewController.swift in Sources */,
 				0E7F0A6F271B05DE00E5162A /* StoryboardsList.swift in Sources */,
+				0E73F92F271B0D3C0031DFC0 /* FontStyle.swift in Sources */,
 				0E7F09F4271A8A7C00E5162A /* AppDelegate.swift in Sources */,
 				0E7F09FE271A8A7D00E5162A /* TVMaze_App.xcdatamodeld in Sources */,
+				0E73F957271B121E0031DFC0 /* ShowsSearchViewController.swift in Sources */,
+				0E73F92A271B0CFC0031DFC0 /* UIColor+Extensions.swift in Sources */,
+				0E73F93A271B0DB80031DFC0 /* UILabel+Extensions.swift in Sources */,
+				0E73F924271B0C650031DFC0 /* BaseColorPalette.swift in Sources */,
+				0E73F949271B0FD90031DFC0 /* FontStyleRegister.swift in Sources */,
+				0E73F935271B0D690031DFC0 /* UIFont+Extensions.swift in Sources */,
 				0E7F0A67271B05B700E5162A /* StoryBoarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
