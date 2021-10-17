@@ -12,3 +12,12 @@ extension String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, comment: "")
     }
 }
+
+extension StringProtocol {
+    var htmlToAttributedString: NSAttributedString? {
+        Data(utf8).htmlToAttributedString
+    }
+    var htmlToString: String {
+        htmlToAttributedString?.string ?? ""
+    }
+}

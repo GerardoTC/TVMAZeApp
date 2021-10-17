@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EpisodeCollectionViewCell" id="gTV-IL-0wX" customClass="EpisodeCollectionViewCell" customModule="TVMaze_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="359"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="359"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zXD-PA-vaf">
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="290"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-yT-MUg">
+                        <rect key="frame" x="16" y="298" width="346" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="0ai-c8-B2J"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="zXD-PA-vaf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6in-WL-YH5"/>
+                <constraint firstAttribute="trailing" secondItem="ddJ-yT-MUg" secondAttribute="trailing" constant="16" id="BGl-Rx-SmA"/>
+                <constraint firstAttribute="bottom" secondItem="ddJ-yT-MUg" secondAttribute="bottom" constant="16" id="ErU-Za-5Qc"/>
+                <constraint firstItem="ddJ-yT-MUg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="F0v-dx-fUd"/>
+                <constraint firstAttribute="trailing" secondItem="zXD-PA-vaf" secondAttribute="trailing" id="KnH-M4-MqA"/>
+                <constraint firstItem="ddJ-yT-MUg" firstAttribute="top" secondItem="zXD-PA-vaf" secondAttribute="bottom" constant="8" id="bWX-iJ-fWb"/>
+                <constraint firstItem="zXD-PA-vaf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="o66-Wh-20e"/>
+            </constraints>
+            <size key="customSize" width="370" height="359"/>
+            <connections>
+                <outlet property="episodeImage" destination="zXD-PA-vaf" id="szK-q5-BJB"/>
+                <outlet property="episodeName" destination="ddJ-yT-MUg" id="KVk-O0-71M"/>
+            </connections>
+            <point key="canvasLocation" x="-62.318840579710148" y="123.54910714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

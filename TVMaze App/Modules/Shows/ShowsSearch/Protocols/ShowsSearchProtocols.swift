@@ -20,6 +20,7 @@ protocol ShowsSearchPresenterProtocol: AnyObject {
     func getTotalRows() -> Int
     func setup(cell: BaseShowCell?, at position: Int)
     func viewDidLoad()
+    func showSelected(_ row: Int)
 }
 
 protocol ShowsSearchInteractorOutputProtocol: AnyObject {
@@ -30,6 +31,7 @@ protocol ShowsSearchRouterProtocol: AnyObject {
     var viewController: UIViewController? { get set }
     
     static func createShowsSearchModule() -> ShowsSearchViewController?
+    func routeToDetail(id: Int)
 }
 
 protocol ShowsSearchViewProtocol: AnyObject {

@@ -8,3 +8,5 @@
 "shows.search.search_text" = "Search";
 "shows.search.title" = "TVMaze Search";
 "shows.search.score" = "Score: ";
+"shows.detail.season" = "Season ";
+"shows.detail.done" = "Done";

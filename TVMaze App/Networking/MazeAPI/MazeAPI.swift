@@ -16,11 +16,12 @@ class MazeAPI: BaseAPIProtocol {
                     if error != nil, let response = response as? HTTPURLResponse {
                         try self?.handleError(response)
                     }
-                    if let data = data, let parseResult = try? resource.parse(data) {
-                        return parseResult
-                    } else {
-                        throw NetworkError.unableToParse(model: String(describing: T.self))
+                    guard let data = data else {
+                        throw NetworkError.dataNotFound
                     }
+                    
+                    let parseResult = try resource.parse(data)
+                    return parseResult
                 }
             )
         }

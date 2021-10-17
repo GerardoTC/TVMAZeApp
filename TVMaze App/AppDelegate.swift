@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupFirstVC() {
         guard let initialViewController = ShowsSearchRouter.createShowsSearchModule() else { return }
         let navigationController = UINavigationController(rootViewController: initialViewController)
+        navigationController.navigationBar.tintColor = BaseColorPalette.accentColor.color
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.tintColor = .systemRed
         window?.rootViewController = navigationController

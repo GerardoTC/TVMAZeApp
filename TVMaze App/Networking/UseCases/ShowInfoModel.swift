@@ -22,5 +22,3 @@ struct ImageSizes: Decodable {
     var medium: String?
     var original: String?
 }
-
-

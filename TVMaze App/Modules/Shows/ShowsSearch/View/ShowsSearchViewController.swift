@@ -53,6 +53,7 @@ final class ShowsSearchViewController: UIViewController, Storyboarded {
         search.searchResultsUpdater = self
         search.searchBar.placeholder = "shows.search.search_text".localized
         search.searchBar.largeContentTitle = "shows.search.title".localized
+        search.searchBar.tintColor = BaseColorPalette.tintColor.color
         navigationItem.searchController = search
         navigationItem.searchController?.view.backgroundColor = BaseColorPalette.clearColor.color
     }
@@ -81,8 +82,8 @@ extension ShowsSearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath.row)")
         tableView.deselectRow(at: indexPath, animated: true)
+        presenter?.showSelected(indexPath.row)
     }
 }
 

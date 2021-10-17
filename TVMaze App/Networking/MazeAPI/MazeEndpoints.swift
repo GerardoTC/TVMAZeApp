@@ -25,7 +25,7 @@ enum MazeEndPoints: RequestInfo {
         case .showsSearch:
             return "/search/shows"
         case .episodes(let showId):
-            return "shows/\(showId)"
+            return "/shows/\(showId)"
         }
     }
     

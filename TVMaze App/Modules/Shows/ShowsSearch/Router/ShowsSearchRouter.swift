@@ -29,5 +29,10 @@ final class ShowsSearchRouter: ShowsSearchRouterProtocol {
         ref?.presenter = presenter
         return ref
     }
+    
+    func routeToDetail(id: Int) {
+        guard let showDetailVC = ShowDetailRouter.createShowDetailModule(id: id) else { return }
+        viewController?.navigationController?.pushViewController(showDetailVC, animated: true)
+    }
 }
 

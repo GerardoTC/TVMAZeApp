@@ -37,6 +37,10 @@ final class ShowsSearchPresenter: ShowsSearchPresenterProtocol {
     func setup(cell: BaseShowCell?, at position: Int) {
         cell?.setupWith(model: shows[position])
     }
+    
+    func showSelected(_ row: Int) {
+        router?.routeToDetail(id: shows[row].show.id)
+    }
 }
 
 extension ShowsSearchPresenter: ShowsSearchInteractorOutputProtocol {
