@@ -9,6 +9,7 @@ import UIKit
 protocol ShowsSearchInteractorProtocol: AnyObject {
     var presenter: ShowsSearchInteractorOutputProtocol? { get set }
     func searchForShows(with: String)
+    func showList(for page: Int)
 }
 
 protocol ShowsSearchPresenterProtocol: AnyObject {
@@ -17,14 +18,16 @@ protocol ShowsSearchPresenterProtocol: AnyObject {
     var interactor: ShowsSearchInteractorProtocol? { get set }
     
     func searchDidChange(_ text: String)
-    func getTotalRows() -> Int
-    func setup(cell: BaseShowCell?, at position: Int)
+    func getTotalSearchRows(isShowList: Bool) -> Int
+    func setup(cell: BaseShowCell?, at position: Int, isShowList: Bool)
     func viewDidLoad()
-    func showSelected(_ row: Int)
+    func showSearchedSelected(_ row: Int, isShowList: Bool)
 }
 
 protocol ShowsSearchInteractorOutputProtocol: AnyObject {
-    func updateShows(shows: [BaseShowInfoModel])
+    func updateShowsSearch(shows: [BaseShowInfoModel])
+    func updateShowsList(shows: [BaseShowInfoModel])
+    func limitPageReached()
 }
 
 protocol ShowsSearchRouterProtocol: AnyObject {
@@ -36,5 +39,8 @@ protocol ShowsSearchRouterProtocol: AnyObject {
 
 protocol ShowsSearchViewProtocol: AnyObject {
     var presenter: ShowsSearchPresenterProtocol? { get set }
-    func refreshShowsView()
+    func refreshShowsSearchView()
+    func refreshShowsListView()
+    func showLoadingFooter()
+    func hideLoadingFooter()
 }

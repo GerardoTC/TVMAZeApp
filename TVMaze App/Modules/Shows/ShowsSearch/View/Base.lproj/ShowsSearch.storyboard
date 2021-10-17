@@ -32,6 +32,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rH9-xq-fsQ"/>
+                    <connections>
+                        <outlet property="showsListTableView" destination="GWm-oo-JPy" id="sxl-hb-Pde"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

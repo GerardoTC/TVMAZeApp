@@ -8,13 +8,14 @@
 import Foundation
 
 struct BaseShowInfoModel: Decodable {
-    var score: Double
+    var score: Double?
     var show: ShowInfoModel
 }
 
 struct ShowInfoModel: Decodable {
     var id: Int
     var name: String
+    var summary: String?
     var image: ImageSizes?
 }
 

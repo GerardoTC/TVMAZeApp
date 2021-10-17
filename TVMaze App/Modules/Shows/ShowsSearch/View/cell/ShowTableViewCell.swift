@@ -11,6 +11,7 @@ class ShowTableViewCell: UITableViewCell, BaseShowCell {
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var showTitle: UILabel!
     @IBOutlet weak var scorelabel: UILabel!
+    @IBOutlet weak var summary: UILabel!
     
     func setupWith(model: BaseShowInfoModel) {
         posterImage.image = nil
@@ -19,6 +20,15 @@ class ShowTableViewCell: UITableViewCell, BaseShowCell {
         showTitle.setFont(.titleS)
         showTitle.text = model.show.name
         posterImage.contentMode = .scaleAspectFill
-        scorelabel.text = "shows.search.score".localized + "\(String(format: "%.2f", model.score * 5)) 🌟"
+        if let summary = model.show.summary {
+            self.summary.setFont(.bodyS)
+            self.summary.text = summary.htmlToString
+        }
+        guard let score = model.score else {
+            scorelabel.text = ""
+            return
+        }
+        scorelabel.setFont(.bodyS)
+        scorelabel.text = "shows.search.score".localized + "\(String(format: "%.2f", score * 5)) 🌟"
     }
 }

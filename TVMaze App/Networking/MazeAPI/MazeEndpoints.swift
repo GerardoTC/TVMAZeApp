@@ -26,6 +26,8 @@ enum MazeEndPoints: RequestInfo {
             return "/search/shows"
         case .episodes(let showId):
             return "/shows/\(showId)"
+        case .showsList:
+            return "/shows"
         }
     }
     
@@ -35,9 +37,12 @@ enum MazeEndPoints: RequestInfo {
             return [URLQueryItem(name: "q", value: query)]
         case .episodes:
             return [URLQueryItem(name: "embed", value: "episodes")]
+        case .showsList(let page):
+            return [URLQueryItem(name: "page", value: "\(page)")]
         }
     }
     
     case showsSearch(query: String)
     case episodes(showId: Int)
+    case showsList(page: Int)
 }

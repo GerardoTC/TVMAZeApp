@@ -10,10 +10,12 @@ final class ShowsSearchPresenter: ShowsSearchPresenterProtocol {
     weak var view: ShowsSearchViewProtocol?
     var router: ShowsSearchRouterProtocol?
     var interactor: ShowsSearchInteractorProtocol?
-    var shows: [BaseShowInfoModel] = []
+    var showsSearch: [BaseShowInfoModel] = []
+    var showsList: [BaseShowInfoModel] = []
     let debouncer: TextDebouncer = TextDebouncer(timeInterval: 0.5)
+    var page = 0
     
-    func viewDidLoad() {
+    private func registerDebouncer() {
         debouncer.closure =  { [weak self] text in
             guard let self = self,
                   let text = text else {
@@ -23,29 +25,51 @@ final class ShowsSearchPresenter: ShowsSearchPresenterProtocol {
         }
     }
     
+    func viewDidLoad() {
+        registerDebouncer()
+        interactor?.showList(for: page)
+        view?.showLoadingFooter()
+    }
+    
     func didEndEditing(text: String) {
         interactor?.searchForShows(with: text)
     }
+    
     func searchDidChange(_ text: String) {
         debouncer.restarInterval(with: text)
     }
     
-    func getTotalRows() -> Int {
-        shows.count
+    func getTotalSearchRows(isShowList: Bool) -> Int {
+        isShowList ? showsList.count : showsSearch.count
     }
     
-    func setup(cell: BaseShowCell?, at position: Int) {
-        cell?.setupWith(model: shows[position])
+    func setup(cell: BaseShowCell?, at position: Int, isShowList: Bool) {
+        cell?.setupWith(model: isShowList ? showsList[position] : showsSearch[position])
+        if isShowList, position == showsList.count - 1 {
+            interactor?.showList(for: page)
+            view?.showLoadingFooter()
+        }
     }
     
-    func showSelected(_ row: Int) {
-        router?.routeToDetail(id: shows[row].show.id)
+    func showSearchedSelected(_ row: Int, isShowList: Bool) {
+        router?.routeToDetail(id: isShowList ? showsList[row].show.id : showsSearch[row].show.id)
     }
 }
 
 extension ShowsSearchPresenter: ShowsSearchInteractorOutputProtocol {
-    func updateShows(shows: [BaseShowInfoModel]) {
-        self.shows = shows
-        view?.refreshShowsView()
+    func updateShowsList(shows: [BaseShowInfoModel]) {
+        page += 1
+        showsList.append(contentsOf: shows)
+        view?.hideLoadingFooter()
+        view?.refreshShowsListView()
+    }
+    
+    func updateShowsSearch(shows: [BaseShowInfoModel]) {
+        showsSearch = shows
+        view?.refreshShowsSearchView()
+    }
+    
+    func limitPageReached() {
+        view?.hideLoadingFooter()
     }
 }

@@ -25,29 +25,38 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfR-2a-K4H">
-                        <rect key="frame" x="158" y="35" width="305" height="20.5"/>
+                        <rect key="frame" x="166" y="35" width="297" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUk-Us-NV3">
+                        <rect key="frame" x="166" y="71.5" width="297" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 5🌟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPM-90-pdl">
-                        <rect key="frame" x="158" y="71.5" width="325" height="21"/>
+                        <rect key="frame" x="166" y="108" width="317" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="yfR-2a-K4H" firstAttribute="leading" secondItem="JgU-G2-MZi" secondAttribute="trailing" constant="8" symbolic="YES" id="Ir5-IU-SVB"/>
-                    <constraint firstAttribute="trailing" secondItem="kPM-90-pdl" secondAttribute="trailing" constant="16" id="MdJ-WJ-V7O"/>
+                    <constraint firstItem="kPM-90-pdl" firstAttribute="leading" secondItem="JgU-G2-MZi" secondAttribute="trailing" constant="16" id="0C5-tj-Lo8"/>
+                    <constraint firstItem="kPM-90-pdl" firstAttribute="top" secondItem="AUk-Us-NV3" secondAttribute="bottom" constant="16" id="5ZK-aK-qnW"/>
+                    <constraint firstItem="yfR-2a-K4H" firstAttribute="leading" secondItem="JgU-G2-MZi" secondAttribute="trailing" constant="16" id="Ir5-IU-SVB"/>
+                    <constraint firstItem="AUk-Us-NV3" firstAttribute="top" secondItem="yfR-2a-K4H" secondAttribute="bottom" constant="16" id="UVo-Cp-az5"/>
                     <constraint firstItem="yfR-2a-K4H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="24" id="WOC-h1-ws3"/>
-                    <constraint firstItem="kPM-90-pdl" firstAttribute="leading" secondItem="JgU-G2-MZi" secondAttribute="trailing" constant="8" symbolic="YES" id="a2e-Wb-yce"/>
                     <constraint firstAttribute="bottom" secondItem="JgU-G2-MZi" secondAttribute="bottom" constant="16" id="ay2-gv-j4Q"/>
                     <constraint firstItem="JgU-G2-MZi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="eK0-YM-pMw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="AUk-Us-NV3" secondAttribute="trailing" constant="16" id="ev6-Ps-1DQ"/>
                     <constraint firstItem="JgU-G2-MZi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="f28-Th-Kek"/>
+                    <constraint firstAttribute="trailing" secondItem="kPM-90-pdl" secondAttribute="trailing" constant="16" id="lMf-LJ-xq6"/>
                     <constraint firstAttribute="trailingMargin" secondItem="yfR-2a-K4H" secondAttribute="trailing" constant="16" id="o3i-mL-Pmp"/>
-                    <constraint firstItem="kPM-90-pdl" firstAttribute="top" secondItem="yfR-2a-K4H" secondAttribute="bottom" constant="16" id="r3V-uQ-EOj"/>
                     <constraint firstItem="JgU-G2-MZi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="rsv-fb-y9h"/>
+                    <constraint firstItem="AUk-Us-NV3" firstAttribute="leading" secondItem="JgU-G2-MZi" secondAttribute="trailing" constant="16" id="zni-am-h01"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -55,6 +64,7 @@
                 <outlet property="posterImage" destination="JgU-G2-MZi" id="p9p-nC-tfr"/>
                 <outlet property="scorelabel" destination="kPM-90-pdl" id="CoA-YQ-anZ"/>
                 <outlet property="showTitle" destination="yfR-2a-K4H" id="l89-r3-wqO"/>
+                <outlet property="summary" destination="AUk-Us-NV3" id="L59-HW-y1n"/>
             </connections>
             <point key="canvasLocation" x="154.34782608695653" y="94.084821428571431"/>
         </tableViewCell>
