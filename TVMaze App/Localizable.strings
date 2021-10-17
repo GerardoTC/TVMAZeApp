@@ -7,3 +7,4 @@
 */
 "shows.search.search_text" = "Search";
 "shows.search.title" = "TVMaze Search";
+"shows.search.score" = "Score: ";

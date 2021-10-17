@@ -7,17 +7,18 @@
 
 import UIKit
 
-class ShowTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+class ShowTableViewCell: UITableViewCell, BaseShowCell {
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var showTitle: UILabel!
+    @IBOutlet weak var scorelabel: UILabel!
     
+    func setupWith(model: BaseShowInfoModel) {
+        posterImage.image = nil
+        posterImage.backgroundColor = BaseColorPalette.bgColorSecondary.color
+        posterImage.load(url: model.show.image?.medium ?? "")
+        showTitle.setFont(.titleS)
+        showTitle.text = model.show.name
+        posterImage.contentMode = .scaleAspectFill
+        scorelabel.text = "shows.search.score".localized + "\(String(format: "%.2f", model.score * 5)) 🌟"
+    }
 }

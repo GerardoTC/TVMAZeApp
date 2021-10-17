@@ -8,6 +8,7 @@ import UIKit
 
 protocol ShowsSearchInteractorProtocol: AnyObject {
     var presenter: ShowsSearchInteractorOutputProtocol? { get set }
+    func searchForShows(with: String)
 }
 
 protocol ShowsSearchPresenterProtocol: AnyObject {
@@ -15,10 +16,14 @@ protocol ShowsSearchPresenterProtocol: AnyObject {
     var router: ShowsSearchRouterProtocol? { get set }
     var interactor: ShowsSearchInteractorProtocol? { get set }
     
+    func searchDidChange(_ text: String)
+    func getTotalRows() -> Int
+    func setup(cell: BaseShowCell?, at position: Int)
     func viewDidLoad()
 }
 
 protocol ShowsSearchInteractorOutputProtocol: AnyObject {
+    func updateShows(shows: [BaseShowInfoModel])
 }
 
 protocol ShowsSearchRouterProtocol: AnyObject {
@@ -29,4 +34,5 @@ protocol ShowsSearchRouterProtocol: AnyObject {
 
 protocol ShowsSearchViewProtocol: AnyObject {
     var presenter: ShowsSearchPresenterProtocol? { get set }
+    func refreshShowsView()
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SerieInfoModel: Decodable {
+struct BaseShowInfoModel: Decodable {
     var score: Double
     var show: ShowInfoModel
 }

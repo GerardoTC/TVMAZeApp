@@ -11,15 +11,11 @@ final class ShowsSearchViewController: UIViewController, Storyboarded {
     
     var presenter: ShowsSearchPresenterProtocol?
     var darkMode = false
-    var showsTableView: UITableView! = UITableView()
+    lazy var showsTableView: UITableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPresenterViewLoad()
         setupUIView()
-    }
-    
-    private func loadPresenterViewLoad() {
         presenter?.viewDidLoad()
     }
     
@@ -38,6 +34,7 @@ final class ShowsSearchViewController: UIViewController, Storyboarded {
         showsTableView.delegate = self
         showsTableView.dataSource = self
         showsTableView.register(nib: ShowTableViewCell.viewID)
+        showsTableView.separatorStyle = .none
     }
     
     private func setupSearchController() {
@@ -50,6 +47,7 @@ final class ShowsSearchViewController: UIViewController, Storyboarded {
             showsTableView.leadingAnchor.constraint(equalTo: vc.view.leadingAnchor),
             showsTableView.trailingAnchor.constraint(equalTo: vc.view.trailingAnchor)
         ])
+        
         let search = UISearchController(searchResultsController: vc)
         
         search.searchResultsUpdater = self
@@ -61,7 +59,11 @@ final class ShowsSearchViewController: UIViewController, Storyboarded {
     
 }
 // MARK: - ViewProtocol
-extension ShowsSearchViewController: ShowsSearchViewProtocol {}
+extension ShowsSearchViewController: ShowsSearchViewProtocol {
+    func refreshShowsView() {
+        showsTableView.reloadData()
+    }
+}
 
 // MARK: - TableViewDelegate
 extension ShowsSearchViewController: UITableViewDelegate {}
@@ -69,13 +71,12 @@ extension ShowsSearchViewController: UITableViewDelegate {}
 // MARK: - TableViewDataSource
 extension ShowsSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return presenter?.getTotalRows() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = UITableViewCell()
-        tableCell.textLabel?.setFont(.bodyM)
-        tableCell.textLabel?.text = "Hello world \(indexPath.row)"
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: ShowTableViewCell.viewID, for: indexPath)
+        presenter?.setup(cell: tableCell as? BaseShowCell, at: indexPath.row)
         return tableCell
     }
     
@@ -85,10 +86,11 @@ extension ShowsSearchViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - SearchResultsUpdating
 extension ShowsSearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else { return }
-        print(text)
+        guard let text = searchController.searchBar.text, text != "" else { return }
+        presenter?.searchDidChange(text)
     }
     
 }
