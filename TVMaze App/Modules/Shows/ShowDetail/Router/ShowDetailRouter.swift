@@ -30,5 +30,10 @@ final class ShowDetailRouter: ShowDetailRouterProtocol {
         ref?.presenter = presenter
         return ref
     }
+    
+    func routeToEpisodeDetail(_ episode: EpisodeInfo) {
+        guard let vc = EpisodesDetailRouter.createEpisodesDetailModule(episode) else { return }
+        viewController?.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

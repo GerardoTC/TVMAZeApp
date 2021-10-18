@@ -31,13 +31,15 @@ final class ShowDetailInteractor: ShowDetailInteractorProtocol {
         var seasonsDict: [Int : [EpisodeInfo]] = [:]
         result._embedded.episodes.forEach { (episode) in
             if seasonsDict[episode.season] == nil {
-                seasonsDict[episode.season] = [EpisodeInfo(name: episode.name,
+                seasonsDict[episode.season] = [EpisodeInfo(id: episode.id,
+                                                           name: episode.name,
                                                            season: episode.season,
                                                            number: episode.number,
                                                            poster: episode.image?.original ?? "",
                                                            summary: episode.summary ?? "")]
             } else {
-                seasonsDict[episode.season]?.append(EpisodeInfo(name: episode.name,
+                seasonsDict[episode.season]?.append(EpisodeInfo(id: episode.id,
+                                                                name: episode.name,
                                                                 season: episode.season,
                                                                 number: episode.number,
                                                                 poster: episode.image?.original ?? "",

@@ -102,14 +102,14 @@ extension ShowsSearchViewController: ShowsSearchViewProtocol {
 extension ShowsSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        presenter?.showSearchedSelected(indexPath.row, isShowList: tableView == showsListTableView)
+        presenter?.showSelected(indexPath.row, isShowList: tableView == showsListTableView)
     }
 }
 
 // MARK: - TableViewDataSource
 extension ShowsSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter?.getTotalSearchRows(isShowList: tableView == showsListTableView) ?? 0
+        return presenter?.getRowsCount(isShowList: tableView == showsListTableView) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

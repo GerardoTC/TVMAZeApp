@@ -43,6 +43,12 @@ final class ShowDetailPresenter: ShowDetailPresenterProtocol {
     func seasonSelected(_ item: Int) {
         updateEpisodesWith(season: item)
     }
+    
+    func didSelect(episode: Int) {
+        var episode = episodes[episode]
+        episode.showPoster = showInfo?.poster
+        router?.routeToEpisodeDetail(episode)
+    }
 }
 
 extension ShowDetailPresenter: ShowDetailInteractorOutputProtocol {

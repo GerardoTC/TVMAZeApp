@@ -8,9 +8,12 @@
 import Foundation
 
 struct EpisodeInfo {
+    var id: Int
     var name: String
     var season: Int
     var number: Int
     var poster: String?
+    var originalPoster: String?
+    var showPoster: String?
     var summary: String
 }

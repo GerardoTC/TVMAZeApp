@@ -121,6 +121,7 @@ extension ShowDetailViewController: UICollectionViewDataSource {
 
 extension ShowDetailViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.didSelect(episode: indexPath.row)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 }

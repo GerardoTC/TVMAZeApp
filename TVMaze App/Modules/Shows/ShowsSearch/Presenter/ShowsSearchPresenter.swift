@@ -39,7 +39,7 @@ final class ShowsSearchPresenter: ShowsSearchPresenterProtocol {
         debouncer.restarInterval(with: text)
     }
     
-    func getTotalSearchRows(isShowList: Bool) -> Int {
+    func getRowsCount(isShowList: Bool) -> Int {
         isShowList ? showsList.count : showsSearch.count
     }
     
@@ -51,7 +51,7 @@ final class ShowsSearchPresenter: ShowsSearchPresenterProtocol {
         }
     }
     
-    func showSearchedSelected(_ row: Int, isShowList: Bool) {
+    func showSelected(_ row: Int, isShowList: Bool) {
         router?.routeToDetail(id: isShowList ? showsList[row].show.id : showsSearch[row].show.id)
     }
 }

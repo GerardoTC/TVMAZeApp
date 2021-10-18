@@ -10,3 +10,5 @@
 "shows.search.score" = "Score: ";
 "shows.detail.season" = "Season ";
 "shows.detail.done" = "Done";
+"episode.detail.episode" = "Episode";
+"episode.detail.season" = "Season";

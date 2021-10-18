@@ -23,6 +23,7 @@ protocol ShowDetailPresenterProtocol: AnyObject {
     func seasonsCount() -> Int
     func seasonTitle(for: Int) -> String
     func seasonSelected(_ item: Int)
+    func didSelect(episode: Int)
 }
 
 protocol ShowDetailInteractorOutputProtocol: AnyObject {
@@ -33,6 +34,7 @@ protocol ShowDetailRouterProtocol: AnyObject {
     var viewController: UIViewController? { get set }
     
     static func createShowDetailModule(id: Int) -> ShowDetailViewController?
+    func routeToEpisodeDetail(_ episode: EpisodeInfo)
 }
 
 protocol ShowDetailViewProtocol: AnyObject {

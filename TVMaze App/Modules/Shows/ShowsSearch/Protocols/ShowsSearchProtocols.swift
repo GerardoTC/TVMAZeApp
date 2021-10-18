@@ -18,10 +18,10 @@ protocol ShowsSearchPresenterProtocol: AnyObject {
     var interactor: ShowsSearchInteractorProtocol? { get set }
     
     func searchDidChange(_ text: String)
-    func getTotalSearchRows(isShowList: Bool) -> Int
+    func getRowsCount(isShowList: Bool) -> Int
     func setup(cell: BaseShowCell?, at position: Int, isShowList: Bool)
     func viewDidLoad()
-    func showSearchedSelected(_ row: Int, isShowList: Bool)
+    func showSelected(_ row: Int, isShowList: Bool)
 }
 
 protocol ShowsSearchInteractorOutputProtocol: AnyObject {
