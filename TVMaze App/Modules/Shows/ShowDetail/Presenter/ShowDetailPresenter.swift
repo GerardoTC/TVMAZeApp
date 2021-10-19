@@ -16,6 +16,7 @@ final class ShowDetailPresenter: ShowDetailPresenterProtocol {
     
     func viewDidLoad() {
         interactor?.getShowInfo(id: showId ?? 0)
+        view?.startLoading()
     }
     
     func episodesCount() -> Int {
@@ -62,5 +63,10 @@ extension ShowDetailPresenter: ShowDetailInteractorOutputProtocol {
         } else {
             view?.hideEpisodes()
         }
+        view?.stopLoading()
+    }
+    
+    func handle(error: Error) {
+        router?.presentAlertError(error: error)
     }
 }

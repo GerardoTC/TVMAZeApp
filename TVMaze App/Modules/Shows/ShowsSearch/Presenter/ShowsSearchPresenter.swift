@@ -72,4 +72,8 @@ extension ShowsSearchPresenter: ShowsSearchInteractorOutputProtocol {
     func limitPageReached() {
         view?.hideLoadingFooter()
     }
+    
+    func handle(error: Error) {
+        router?.presentAlertError(error: error)
+    }
 }

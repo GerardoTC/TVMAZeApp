@@ -42,6 +42,7 @@ final class ShowsSearchViewController: UIViewController, Storyboarded {
         showsListTableView.delegate = self
         showsListTableView.dataSource = self
         footerLoader.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+        footerLoader.color = BaseColorPalette.tintColor.color
         showsListTableView.tableFooterView = footerLoader
     }
     

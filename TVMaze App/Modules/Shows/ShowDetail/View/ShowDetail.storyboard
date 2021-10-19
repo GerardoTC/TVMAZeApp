@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14J-Tt-dfz" userLabel="LoadingView" customClass="UILoadingView" customModule="TVMaze_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-cP-gtJ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
@@ -159,15 +163,20 @@
                         <viewLayoutGuide key="safeArea" id="suz-rW-bbd"/>
                         <color key="backgroundColor" name="BgColorSecondary"/>
                         <constraints>
+                            <constraint firstItem="14J-Tt-dfz" firstAttribute="top" secondItem="aDY-Zf-2Il" secondAttribute="top" id="E4E-WY-efx"/>
                             <constraint firstItem="suz-rW-bbd" firstAttribute="bottom" secondItem="mz2-cP-gtJ" secondAttribute="bottom" id="ILz-Up-AMD"/>
+                            <constraint firstItem="suz-rW-bbd" firstAttribute="trailing" secondItem="14J-Tt-dfz" secondAttribute="trailing" id="PGN-Dg-oPu"/>
+                            <constraint firstAttribute="bottom" secondItem="14J-Tt-dfz" secondAttribute="bottom" id="SRb-mO-Y8a"/>
                             <constraint firstItem="mz2-cP-gtJ" firstAttribute="leading" secondItem="suz-rW-bbd" secondAttribute="leading" id="XVi-Bi-nqW"/>
                             <constraint firstItem="mz2-cP-gtJ" firstAttribute="top" secondItem="suz-rW-bbd" secondAttribute="top" id="fZA-hV-Oqn"/>
+                            <constraint firstItem="14J-Tt-dfz" firstAttribute="leading" secondItem="suz-rW-bbd" secondAttribute="leading" id="nta-YP-s5o"/>
                             <constraint firstItem="suz-rW-bbd" firstAttribute="trailing" secondItem="mz2-cP-gtJ" secondAttribute="trailing" id="qgV-XT-K8T"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="episodesList" destination="3e4-yk-Bhm" id="fgS-Ap-dSa"/>
                         <outlet property="episodesTitle" destination="iah-S2-hNk" id="agl-e7-6KE"/>
+                        <outlet property="loadingView" destination="14J-Tt-dfz" id="tav-gU-g4b"/>
                         <outlet property="pickerImage" destination="M4R-u4-vpX" id="a0o-OB-VTu"/>
                         <outlet property="poster" destination="0Di-Kh-bl6" id="wcR-pX-uqj"/>
                         <outlet property="seasonsInput" destination="INY-Lr-ZzO" id="tS3-fn-L97"/>

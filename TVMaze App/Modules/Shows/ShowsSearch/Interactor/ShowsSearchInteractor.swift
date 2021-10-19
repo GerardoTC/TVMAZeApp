@@ -45,7 +45,7 @@ final class ShowsSearchInteractor: ShowsSearchInteractorProtocol {
                     BaseShowInfoModel(score: nil, show: $0)
                 })
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.presenter?.handle(error: error)
             }
         }
     }

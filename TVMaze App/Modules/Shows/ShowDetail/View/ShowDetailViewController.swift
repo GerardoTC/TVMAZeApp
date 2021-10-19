@@ -16,6 +16,7 @@ final class ShowDetailViewController: UIViewController, Storyboarded {
     @IBOutlet weak var seasonsInput: UITextField!
     @IBOutlet weak var episodesList: UICollectionView!
     @IBOutlet weak var pickerImage: UIImageView!
+    @IBOutlet weak var loadingView: UILoadingView!
     var seasonPicker: UIPickerView = UIPickerView()
     
     var presenter: ShowDetailPresenterProtocol?
@@ -34,6 +35,7 @@ final class ShowDetailViewController: UIViewController, Storyboarded {
         setupTextStyles()
         setupCollection()
         setupPicker()
+        view.bringSubviewToFront(loadingView)
     }
 
     private func setupTextStyles() {
@@ -77,8 +79,28 @@ final class ShowDetailViewController: UIViewController, Storyboarded {
         toolBar.isUserInteractionEnabled = true
         return toolBar
     }
+    
+    func startLoading() {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = false
+            
+        }
+        
+    }
+    
+    func stopLoading() {
+        DispatchQueue.main.async {
+            self.loadingView.alpha = 1
+            UIView.animate(withDuration: 0.5,animations: {
+                self.loadingView.alpha = 0
+            }) { _ in
+                self.loadingView.isHidden = true
+            }
+        }
+    }
 }
 
+//MARK: - ShowDetailViewProtocol
 extension ShowDetailViewController: ShowDetailViewProtocol {
     func updateEpisodesList() {
         DispatchQueue.main.async { [unowned self] in
@@ -87,9 +109,10 @@ extension ShowDetailViewController: ShowDetailViewProtocol {
     }
     
     func updateView(_ info: ShowInfoDetail) {
-        DispatchQueue.main.async { [unowned self] in
-            self.poster.load(url: info.poster ?? "", errorClosure: { [unowned self] _ in
-                self.poster.isHidden = true
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.poster.load(url: info.poster ?? "", errorClosure: { [weak self] _ in
+                self?.poster.isHidden = true
             })
             self.showName.text = info.title
             self.showInfo.text = info.genres + (info.schedule == " • " ? "" :  "\n" + info.schedule)
@@ -105,6 +128,7 @@ extension ShowDetailViewController: ShowDetailViewProtocol {
     }
 }
 
+//MARK: - CollectionView Data Source
 extension ShowDetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter?.episodesCount() ?? 0
@@ -119,6 +143,7 @@ extension ShowDetailViewController: UICollectionViewDataSource {
     
 }
 
+//MARK: - CollectionView Delegate
 extension ShowDetailViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter?.didSelect(episode: indexPath.row)
@@ -126,6 +151,7 @@ extension ShowDetailViewController: UICollectionViewDelegate {
     }
 }
 
+//MARK: - PickerView Data Source
 extension ShowDetailViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -140,6 +166,7 @@ extension ShowDetailViewController: UIPickerViewDataSource {
     }
 }
 
+//MARK: - PickerView Delegate
 extension ShowDetailViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         presenter?.seasonSelected(row)

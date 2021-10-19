@@ -22,7 +22,7 @@ final class ShowDetailInteractor: ShowDetailInteractorProtocol {
             case .success(let showInfo):
                 self?.handleSuccess(result: showInfo)
             case .failure(let error):
-                print(error)
+                self?.presenter?.handle(error: error)
             }
         }
     }
@@ -35,14 +35,16 @@ final class ShowDetailInteractor: ShowDetailInteractorProtocol {
                                                            name: episode.name,
                                                            season: episode.season,
                                                            number: episode.number,
-                                                           poster: episode.image?.original ?? "",
+                                                           poster: episode.image?.medium ?? "",
+                                                           originalPoster: episode.image?.original,
                                                            summary: episode.summary ?? "")]
             } else {
                 seasonsDict[episode.season]?.append(EpisodeInfo(id: episode.id,
                                                                 name: episode.name,
                                                                 season: episode.season,
                                                                 number: episode.number,
-                                                                poster: episode.image?.original ?? "",
+                                                                poster: episode.image?.medium ?? "",
+                                                                originalPoster: episode.image?.original,
                                                                 summary: episode.summary ?? ""))
             }
         }

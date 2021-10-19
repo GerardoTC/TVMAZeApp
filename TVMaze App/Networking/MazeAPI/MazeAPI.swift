@@ -13,7 +13,8 @@ class MazeAPI: BaseAPIProtocol {
         let datatask = URLSession.shared.dataTask(with: resource.request) { (data, response, error) in
             completion(
                 Result { [weak self] in
-                    if error != nil, let response = response as? HTTPURLResponse {
+                    if error != nil {
+                        let response = response as? HTTPURLResponse
                         try self?.handleError(response)
                     }
                     guard let data = data else {
@@ -29,9 +30,9 @@ class MazeAPI: BaseAPIProtocol {
         return datatask
     }
     
-    func handleError(_ response: HTTPURLResponse) throws {
-        if (500...599).contains(response.statusCode) {
-            throw NetworkError.serverError(code: response.statusCode)
+    func handleError(_ response: HTTPURLResponse?) throws {
+        if let statusCode = response?.statusCode, (500...599).contains(statusCode) {
+            throw NetworkError.serverError(code: statusCode)
         } else {
             throw NetworkError.connectionError
         }

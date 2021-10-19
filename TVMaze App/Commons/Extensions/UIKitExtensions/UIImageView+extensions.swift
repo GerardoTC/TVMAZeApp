@@ -18,8 +18,10 @@ extension UIImageView {
                 let data = try Data(contentsOf: url)
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
-                        UIView.animate(withDuration: 0.33) {
+                        self?.alpha = 0
+                        UIView.animate(withDuration: 0.3) {
                             self?.image = image
+                            self?.alpha = 1
                         }
                     }
                 }

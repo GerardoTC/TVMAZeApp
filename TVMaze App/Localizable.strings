@@ -12,3 +12,8 @@
 "shows.detail.done" = "Done";
 "episode.detail.episode" = "Episode";
 "episode.detail.season" = "Season";
+"error.internet_connection" = "Internet connection error, please check your connection and try again.";
+"error.server_error" = "Our system is not working right now, please try again later.";
+"error.unexpected_error" = "An unexpected error happened please try again later";
+"error.title" = "Error!";
+"error.ok" = "Ok";

@@ -65,7 +65,7 @@ extension EpisodesDetailViewController: EpisodesDetailViewProtocol {
         blurBgView.insertSubview(blurView, at: 0)
         bgImage.contentMode = .scaleAspectFill
         serieImage.load(url: info.showPoster ?? "")
-        bgImage.load(url: info.poster ?? "")
+        bgImage.load(url: info.originalPoster ?? "")
         summary.text = info.summary.htmlToString
         episodeTitle.text = info.name
         episodeInfo.text = "episode.detail.episode".localized + " \(info.number), " + "episode.detail.season".localized +  " \(info.season)"

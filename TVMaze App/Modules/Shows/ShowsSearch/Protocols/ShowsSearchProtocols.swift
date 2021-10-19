@@ -24,13 +24,13 @@ protocol ShowsSearchPresenterProtocol: AnyObject {
     func showSelected(_ row: Int, isShowList: Bool)
 }
 
-protocol ShowsSearchInteractorOutputProtocol: AnyObject {
+protocol ShowsSearchInteractorOutputProtocol: BasePresenterWithError {
     func updateShowsSearch(shows: [BaseShowInfoModel])
     func updateShowsList(shows: [BaseShowInfoModel])
     func limitPageReached()
 }
 
-protocol ShowsSearchRouterProtocol: AnyObject {
+protocol ShowsSearchRouterProtocol: BaseRouterWithError {
     var viewController: UIViewController? { get set }
     
     static func createShowsSearchModule() -> ShowsSearchViewController?

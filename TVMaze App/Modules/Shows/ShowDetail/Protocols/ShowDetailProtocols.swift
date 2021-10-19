@@ -26,11 +26,11 @@ protocol ShowDetailPresenterProtocol: AnyObject {
     func didSelect(episode: Int)
 }
 
-protocol ShowDetailInteractorOutputProtocol: AnyObject {
+protocol ShowDetailInteractorOutputProtocol: BasePresenterWithError {
     func updateShowInfo(info show: ShowInfoDetail, seasons: [Int : [EpisodeInfo]])
 }
 
-protocol ShowDetailRouterProtocol: AnyObject {
+protocol ShowDetailRouterProtocol: BaseRouterWithError {
     var viewController: UIViewController? { get set }
     
     static func createShowDetailModule(id: Int) -> ShowDetailViewController?
@@ -42,4 +42,6 @@ protocol ShowDetailViewProtocol: AnyObject {
     func updateView(_ info: ShowInfoDetail)
     func updateEpisodesList()
     func hideEpisodes()
+    func startLoading()
+    func stopLoading()
 }
