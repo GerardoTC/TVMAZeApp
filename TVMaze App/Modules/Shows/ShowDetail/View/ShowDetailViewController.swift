@@ -17,6 +17,7 @@ final class ShowDetailViewController: UIViewController, Storyboarded {
     @IBOutlet weak var episodesList: UICollectionView!
     @IBOutlet weak var pickerImage: UIImageView!
     @IBOutlet weak var loadingView: UILoadingView!
+    @IBOutlet weak var seasonPickerView: UIView!
     var seasonPicker: UIPickerView = UIPickerView()
     
     var presenter: ShowDetailPresenterProtocol?
@@ -83,7 +84,6 @@ final class ShowDetailViewController: UIViewController, Storyboarded {
     func startLoading() {
         DispatchQueue.main.async {
             self.loadingView.isHidden = false
-            
         }
         
     }
@@ -121,9 +121,10 @@ extension ShowDetailViewController: ShowDetailViewProtocol {
     }
     
     func hideEpisodes() {
-        DispatchQueue.main.async { [unowned self] in
-            episodesList.isHidden = true
-            episodesTitle.isHidden = true
+        DispatchQueue.main.async { [weak self] in
+            self?.episodesList.isHidden = true
+            self?.episodesTitle.isHidden = true
+            self?.seasonPickerView.isHidden = true
         }
     }
 }

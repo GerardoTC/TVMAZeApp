@@ -49,7 +49,7 @@ final class ShowDetailInteractor: ShowDetailInteractorProtocol {
             }
         }
         presenter?.updateShowInfo(info: ShowInfoDetail(title: result.name,
-                                                       summary: result.summary,
+                                                       summary: result.summary ?? "",
                                                        genres: result.genres.joined(separator: ", "),
                                                        schedule: [ result.schedule.days.joined(separator: ","), "\(result.schedule.time)"].joined(separator: " • "),
                                                        poster: result.image?.original),

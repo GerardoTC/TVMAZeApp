@@ -49,6 +49,26 @@
 		0E9C09DA271DCFE10041190C /* UILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C09D9271DCFE10041190C /* UILoadingView.swift */; };
 		0E9C09E7271E38110041190C /* BaseRouterWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C09E6271E38110041190C /* BaseRouterWithError.swift */; };
 		0E9C09F4271E3F360041190C /* BasePresenterWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C09F3271E3F360041190C /* BasePresenterWithError.swift */; };
+		0E9C09FA271E48680041190C /* IconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C09F9271E48680041190C /* IconProvider.swift */; };
+		0E9C0A1F271E50C10041190C /* AppSettingsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A15271E50C00041190C /* AppSettingsProtocols.swift */; };
+		0E9C0A20271E50C10041190C /* AppSettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A18271E50C00041190C /* AppSettingsInteractor.swift */; };
+		0E9C0A21271E50C10041190C /* AppSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A1A271E50C00041190C /* AppSettingsPresenter.swift */; };
+		0E9C0A22271E50C10041190C /* AppSettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A1C271E50C10041190C /* AppSettingsRouter.swift */; };
+		0E9C0A23271E50C10041190C /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A1E271E50C10041190C /* AppSettingsViewController.swift */; };
+		0E9C0A28271E51110041190C /* AppSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9C0A27271E51110041190C /* AppSettings.storyboard */; };
+		0E9C0A2E271E612C0041190C /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A2D271E612C0041190C /* SecureStore.swift */; };
+		0E9C0A33271E61360041190C /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A32271E61360041190C /* LocalStore.swift */; };
+		0E9C0A38271E618F0041190C /* DefaultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A37271E618F0041190C /* DefaultStore.swift */; };
+		0E9C0A3D271E62730041190C /* SecureStoreKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A3C271E62730041190C /* SecureStoreKeys.swift */; };
+		0E9C0A42271E62CF0041190C /* DefaultStoreKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A41271E62CF0041190C /* DefaultStoreKeys.swift */; };
+		0E9C0A47271E637D0041190C /* String+SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A46271E637D0041190C /* String+SHA256.swift */; };
+		0E9C0A4F271E6DF50041190C /* DarkModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A4E271E6DF50041190C /* DarkModeManager.swift */; };
+		0E9C0A72271E6FE00041190C /* PinAuthenticationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A68271E6FDF0041190C /* PinAuthenticationInteractor.swift */; };
+		0E9C0A73271E6FE00041190C /* PinAuthenticationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A6A271E6FDF0041190C /* PinAuthenticationProtocols.swift */; };
+		0E9C0A74271E6FE00041190C /* PinAuthenticationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A6C271E6FDF0041190C /* PinAuthenticationRouter.swift */; };
+		0E9C0A75271E6FE00041190C /* PinAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A6E271E6FE00041190C /* PinAuthenticationViewController.swift */; };
+		0E9C0A76271E6FE00041190C /* PinAuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A71271E6FE00041190C /* PinAuthenticationPresenter.swift */; };
+		0E9C0A7B271E6FF20041190C /* PinAuthentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9C0A7A271E6FF20041190C /* PinAuthentication.storyboard */; };
 		0EDA493C271B171A00C942D9 /* ShowsSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA4932271B171A00C942D9 /* ShowsSearchProtocols.swift */; };
 		0EDA493E271B171A00C942D9 /* ShowsSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA4937271B171A00C942D9 /* ShowsSearchPresenter.swift */; };
 		0EDA493F271B171A00C942D9 /* ShowsSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA4939271B171A00C942D9 /* ShowsSearchRouter.swift */; };
@@ -137,6 +157,26 @@
 		0E9C09D9271DCFE10041190C /* UILoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UILoadingView.swift; path = Storyboarded/UILoadingView.swift; sourceTree = "<group>"; };
 		0E9C09E6271E38110041190C /* BaseRouterWithError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouterWithError.swift; sourceTree = "<group>"; };
 		0E9C09F3271E3F360041190C /* BasePresenterWithError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterWithError.swift; sourceTree = "<group>"; };
+		0E9C09F9271E48680041190C /* IconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconProvider.swift; sourceTree = "<group>"; };
+		0E9C0A15271E50C00041190C /* AppSettingsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsProtocols.swift; sourceTree = "<group>"; };
+		0E9C0A18271E50C00041190C /* AppSettingsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsInteractor.swift; sourceTree = "<group>"; };
+		0E9C0A1A271E50C00041190C /* AppSettingsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsPresenter.swift; sourceTree = "<group>"; };
+		0E9C0A1C271E50C10041190C /* AppSettingsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsRouter.swift; sourceTree = "<group>"; };
+		0E9C0A1E271E50C10041190C /* AppSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
+		0E9C0A27271E51110041190C /* AppSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppSettings.storyboard; sourceTree = "<group>"; };
+		0E9C0A2D271E612C0041190C /* SecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
+		0E9C0A32271E61360041190C /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		0E9C0A37271E618F0041190C /* DefaultStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStore.swift; sourceTree = "<group>"; };
+		0E9C0A3C271E62730041190C /* SecureStoreKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreKeys.swift; sourceTree = "<group>"; };
+		0E9C0A41271E62CF0041190C /* DefaultStoreKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStoreKeys.swift; sourceTree = "<group>"; };
+		0E9C0A46271E637D0041190C /* String+SHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SHA256.swift"; sourceTree = "<group>"; };
+		0E9C0A4E271E6DF50041190C /* DarkModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeManager.swift; sourceTree = "<group>"; };
+		0E9C0A68271E6FDF0041190C /* PinAuthenticationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAuthenticationInteractor.swift; sourceTree = "<group>"; };
+		0E9C0A6A271E6FDF0041190C /* PinAuthenticationProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAuthenticationProtocols.swift; sourceTree = "<group>"; };
+		0E9C0A6C271E6FDF0041190C /* PinAuthenticationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAuthenticationRouter.swift; sourceTree = "<group>"; };
+		0E9C0A6E271E6FE00041190C /* PinAuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAuthenticationViewController.swift; sourceTree = "<group>"; };
+		0E9C0A71271E6FE00041190C /* PinAuthenticationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAuthenticationPresenter.swift; sourceTree = "<group>"; };
+		0E9C0A7A271E6FF20041190C /* PinAuthentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PinAuthentication.storyboard; sourceTree = "<group>"; };
 		0EDA4932271B171A00C942D9 /* ShowsSearchProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSearchProtocols.swift; sourceTree = "<group>"; };
 		0EDA4937271B171A00C942D9 /* ShowsSearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSearchPresenter.swift; sourceTree = "<group>"; };
 		0EDA4939271B171A00C942D9 /* ShowsSearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSearchRouter.swift; sourceTree = "<group>"; };
@@ -259,6 +299,7 @@
 		0E73F90D271B09710031DFC0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0E9C0A01271E507D0041190C /* Settings */,
 				0E9C09AD271CEA9F0041190C /* Episodes */,
 				0E73F91A271B0A4D0031DFC0 /* Shows */,
 			);
@@ -289,6 +330,7 @@
 		0E73F91F271B0B500031DFC0 /* UIStyle */ = {
 			isa = PBXGroup;
 			children = (
+				0E9C09F8271E48520041190C /* Icons */,
 				0E73F95B271B12450031DFC0 /* Color */,
 				0E73F93F271B0F2A0031DFC0 /* Font */,
 			);
@@ -369,6 +411,7 @@
 		0E7F09F2271A8A7C00E5162A /* TVMaze App */ = {
 			isa = PBXGroup;
 			children = (
+				0E9C0A2C271E61190041190C /* DataStore */,
 				0E73F90D271B09710031DFC0 /* Modules */,
 				0EDA49C3271B375A00C942D9 /* Networking */,
 				0E73F91F271B0B500031DFC0 /* UIStyle */,
@@ -410,6 +453,7 @@
 				0E9C09D9271DCFE10041190C /* UILoadingView.swift */,
 				0E9C09E6271E38110041190C /* BaseRouterWithError.swift */,
 				0E9C09F3271E3F360041190C /* BasePresenterWithError.swift */,
+				0E9C0A4E271E6DF50041190C /* DarkModeManager.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -503,6 +547,157 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		0E9C09F8271E48520041190C /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C09F9271E48680041190C /* IconProvider.swift */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		0E9C0A01271E507D0041190C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A54271E6FBB0041190C /* PinAuthentication */,
+				0E9C0A53271E6FAE0041190C /* AppSettings */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0E9C0A14271E50C00041190C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A15271E50C00041190C /* AppSettingsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0E9C0A16271E50C00041190C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		0E9C0A17271E50C00041190C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A18271E50C00041190C /* AppSettingsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0E9C0A19271E50C00041190C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A1A271E50C00041190C /* AppSettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0E9C0A1B271E50C10041190C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A1C271E50C10041190C /* AppSettingsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0E9C0A1D271E50C10041190C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A1E271E50C10041190C /* AppSettingsViewController.swift */,
+				0E9C0A27271E51110041190C /* AppSettings.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E9C0A2C271E61190041190C /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A2D271E612C0041190C /* SecureStore.swift */,
+				0E9C0A32271E61360041190C /* LocalStore.swift */,
+				0E9C0A37271E618F0041190C /* DefaultStore.swift */,
+				0E9C0A3C271E62730041190C /* SecureStoreKeys.swift */,
+				0E9C0A41271E62CF0041190C /* DefaultStoreKeys.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		0E9C0A53271E6FAE0041190C /* AppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A16271E50C00041190C /* Entity */,
+				0E9C0A17271E50C00041190C /* Interactor */,
+				0E9C0A19271E50C00041190C /* Presenter */,
+				0E9C0A14271E50C00041190C /* Protocols */,
+				0E9C0A1B271E50C10041190C /* Router */,
+				0E9C0A1D271E50C10041190C /* View */,
+			);
+			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		0E9C0A54271E6FBB0041190C /* PinAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A6F271E6FE00041190C /* Entity */,
+				0E9C0A67271E6FDF0041190C /* Interactor */,
+				0E9C0A70271E6FE00041190C /* Presenter */,
+				0E9C0A69271E6FDF0041190C /* Protocols */,
+				0E9C0A6B271E6FDF0041190C /* Router */,
+				0E9C0A6D271E6FE00041190C /* View */,
+			);
+			path = PinAuthentication;
+			sourceTree = "<group>";
+		};
+		0E9C0A67271E6FDF0041190C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A68271E6FDF0041190C /* PinAuthenticationInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0E9C0A69271E6FDF0041190C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A6A271E6FDF0041190C /* PinAuthenticationProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0E9C0A6B271E6FDF0041190C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A6C271E6FDF0041190C /* PinAuthenticationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0E9C0A6D271E6FE00041190C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A6E271E6FE00041190C /* PinAuthenticationViewController.swift */,
+				0E9C0A7A271E6FF20041190C /* PinAuthentication.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E9C0A6F271E6FE00041190C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		0E9C0A70271E6FE00041190C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C0A71271E6FE00041190C /* PinAuthenticationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		0EDA48FC271B156200C942D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +754,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDA49BE271B2A1300C942D9 /* String+Localizable.swift */,
+				0E9C0A46271E637D0041190C /* String+SHA256.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -715,7 +911,9 @@
 			files = (
 				0E1378C6271BA9DC003F4E37 /* ShowDetail.storyboard in Resources */,
 				0EDA4964271B260300C942D9 /* ShowTableViewCell.xib in Resources */,
+				0E9C0A7B271E6FF20041190C /* PinAuthentication.storyboard in Resources */,
 				0E73F942271B0F560031DFC0 /* Montserrat-Regular.ttf in Resources */,
+				0E9C0A28271E51110041190C /* AppSettings.storyboard in Resources */,
 				0E7F0A03271A8A8600E5162A /* LaunchScreen.storyboard in Resources */,
 				0EDA49BA271B29DC00C942D9 /* Localizable.strings in Resources */,
 				0E9C09D5271CEBDC0041190C /* EpisodesDetail.storyboard in Resources */,
@@ -749,27 +947,36 @@
 			files = (
 				0EDA493C271B171A00C942D9 /* ShowsSearchProtocols.swift in Sources */,
 				0E7F0A6F271B05DE00E5162A /* StoryboardsList.swift in Sources */,
+				0E9C0A73271E6FE00041190C /* PinAuthenticationProtocols.swift in Sources */,
 				0E9C098C271C7B3D0041190C /* BaseEpisodeCollectionCell.swift in Sources */,
+				0E9C0A33271E61360041190C /* LocalStore.swift in Sources */,
+				0E9C0A21271E50C10041190C /* AppSettingsPresenter.swift in Sources */,
 				0EDA4A0A271B563600C942D9 /* UIImageView+extensions.swift in Sources */,
 				0E1378D0271C51BF003F4E37 /* EpisodeInfo.swift in Sources */,
 				0E9C09DA271DCFE10041190C /* UILoadingView.swift in Sources */,
 				0E1378C1271BA9A5003F4E37 /* ShowDetailViewController.swift in Sources */,
 				0E73F92F271B0D3C0031DFC0 /* FontStyle.swift in Sources */,
+				0E9C0A1F271E50C10041190C /* AppSettingsProtocols.swift in Sources */,
 				0EDA49BF271B2A1300C942D9 /* String+Localizable.swift in Sources */,
+				0E9C0A23271E50C10041190C /* AppSettingsViewController.swift in Sources */,
 				0EDA493E271B171A00C942D9 /* ShowsSearchPresenter.swift in Sources */,
 				0E137898271BA5AF003F4E37 /* TextDebouncer.swift in Sources */,
 				0E1378D5271C5204003F4E37 /* ShowInfoDetail.swift in Sources */,
 				0EDA49CF271B3D5B00C942D9 /* BaseAPIConfig.swift in Sources */,
 				0EDA49FA271B4C3300C942D9 /* ShowInfoModel.swift in Sources */,
 				0E9C09CF271CEAD20041190C /* EpisodesDetailViewController.swift in Sources */,
+				0E9C0A75271E6FE00041190C /* PinAuthenticationViewController.swift in Sources */,
 				0E7F09F4271A8A7C00E5162A /* AppDelegate.swift in Sources */,
+				0E9C0A4F271E6DF50041190C /* DarkModeManager.swift in Sources */,
 				0E1378BD271BA9A5003F4E37 /* ShowDetailInteractor.swift in Sources */,
 				0EDA49E3271B447800C942D9 /* MazeAPI.swift in Sources */,
 				0E7F09FE271A8A7D00E5162A /* TVMaze_App.xcdatamodeld in Sources */,
 				0E1378BE271BA9A5003F4E37 /* ShowDetailProtocols.swift in Sources */,
 				0E73F957271B121E0031DFC0 /* ShowsSearchViewController.swift in Sources */,
+				0E9C0A47271E637D0041190C /* String+SHA256.swift in Sources */,
 				0EDA4957271B1C9000C942D9 /* UITableView+Extensions.swift in Sources */,
 				0E9C09F4271E3F360041190C /* BasePresenterWithError.swift in Sources */,
+				0E9C0A74271E6FE00041190C /* PinAuthenticationRouter.swift in Sources */,
 				0E1378CB271BAD83003F4E37 /* ShowDetailInfoModel.swift in Sources */,
 				0E9C09E7271E38110041190C /* BaseRouterWithError.swift in Sources */,
 				0EDA49DB271B443A00C942D9 /* BaseAPIMethods.swift in Sources */,
@@ -780,20 +987,29 @@
 				0E9C09CE271CEAD20041190C /* EpisodesDetailInteractor.swift in Sources */,
 				0E1378BF271BA9A5003F4E37 /* ShowDetailRouter.swift in Sources */,
 				0E73F92A271B0CFC0031DFC0 /* UIColor+Extensions.swift in Sources */,
+				0E9C0A38271E618F0041190C /* DefaultStore.swift in Sources */,
 				0EDA4963271B260300C942D9 /* ShowTableViewCell.swift in Sources */,
 				0E9C09CD271CEAD20041190C /* EpisodesDetailRouter.swift in Sources */,
+				0E9C0A42271E62CF0041190C /* DefaultStoreKeys.swift in Sources */,
 				0EDA49F5271B4BEA00C942D9 /* Codable+Extensions.swift in Sources */,
 				0E73F93A271B0DB80031DFC0 /* UILabel+Extensions.swift in Sources */,
+				0E9C0A22271E50C10041190C /* AppSettingsRouter.swift in Sources */,
+				0E9C0A20271E50C10041190C /* AppSettingsInteractor.swift in Sources */,
 				0E73F924271B0C650031DFC0 /* BaseColorPalette.swift in Sources */,
 				0E9C09D0271CEAD20041190C /* EpisodesDetailProtocols.swift in Sources */,
 				0EDA4969271B26FD00C942D9 /* UIView+Extensions.swift in Sources */,
 				0EDA49EB271B45F600C942D9 /* NetworkError.swift in Sources */,
 				0E9C09CC271CEAD20041190C /* EpisodesDetailPresenter.swift in Sources */,
 				0E73F949271B0FD90031DFC0 /* FontStyleRegister.swift in Sources */,
+				0E9C0A76271E6FE00041190C /* PinAuthenticationPresenter.swift in Sources */,
+				0E9C09FA271E48680041190C /* IconProvider.swift in Sources */,
 				0EDA4940271B171A00C942D9 /* ShowsSearchInteractor.swift in Sources */,
+				0E9C0A2E271E612C0041190C /* SecureStore.swift in Sources */,
 				0E9C097E271C6DFD0041190C /* Data+Extensions.swift in Sources */,
 				0E73F935271B0D690031DFC0 /* UIFont+Extensions.swift in Sources */,
+				0E9C0A72271E6FE00041190C /* PinAuthenticationInteractor.swift in Sources */,
 				0E1378C0271BA9A5003F4E37 /* ShowDetailPresenter.swift in Sources */,
+				0E9C0A3D271E62730041190C /* SecureStoreKeys.swift in Sources */,
 				0EDA4A05271B557F00C942D9 /* BaseShowCell.swift in Sources */,
 				0E7F0A67271B05B700E5162A /* StoryBoarded.swift in Sources */,
 				0EDA493F271B171A00C942D9 /* ShowsSearchRouter.swift in Sources */,

@@ -11,4 +11,6 @@ enum Storyboards: String {
     case showsSearch = "ShowsSearch"
     case showDetail = "ShowDetail"
     case episodesDetail = "EpisodesDetail"
+    case appSettings = "AppSettings"
+    case pinAuthentication = "PinAuthentication"
 }

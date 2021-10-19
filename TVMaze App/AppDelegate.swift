@@ -20,13 +20,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupFirstVC() {
-        guard let initialViewController = ShowsSearchRouter.createShowsSearchModule() else { return }
-        let navigationController = UINavigationController(rootViewController: initialViewController)
+        let tabBar = UITabBarController()
+        
+        guard let showsListViewController = ShowsSearchRouter.createShowsSearchModule(),
+              let appSettings = AppSettingsRouter.createAppSettingsModule()
+              else { return }
+        let navigationController = UINavigationController(rootViewController: showsListViewController)
         navigationController.navigationBar.tintColor = BaseColorPalette.accentColor.color
+        navigationController.tabBarItem = UITabBarItem(title: "Shows", image: IconProvider.showsTabIcon.image, selectedImage: IconProvider.showsTabIcon.image)
+        
+        
+        appSettings.tabBarItem = UITabBarItem(title: "Settings", image: IconProvider.appSettingsIcon.image, selectedImage: IconProvider.appSettingsIcon.image)
+        tabBar.setViewControllers([navigationController, appSettings], animated: false)
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.tintColor = .systemRed
-        window?.rootViewController = navigationController
+        window?.tintColor = BaseColorPalette.tintColor.color
+        window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
+        updateDarkModeStyle()
+    }
+    
+    private func updateDarkModeStyle() {
+        DarkModeManager.updateDarkModeStatus(isOn: DefaultStore()[DefaultStoreKeys.darkModeOn.rawValue])
     }
 }
 
