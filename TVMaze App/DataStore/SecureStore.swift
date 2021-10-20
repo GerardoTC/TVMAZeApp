@@ -12,7 +12,7 @@ class SecureStore: LocalStore {
     subscript(key: String) -> String {
         get {
             let stringData = get(key: key)
-            return String.decode(from: stringData) ?? ""
+            return String(data: stringData ?? Data(), encoding: .utf8) ?? ""
         }
         set {
             save(key: key, value: newValue.data(using: .utf8))

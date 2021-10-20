@@ -22,6 +22,18 @@ extension BaseRouterWithError {
             errorMessage = "error.internet_connection".localized
         case NetworkError.serverError:
             errorMessage = "error.server_error".localized
+        case PinAuthenticationError.invalidPin:
+            errorMessage = "Your pin is invalid, please try again"
+        case PinAuthenticationError.invalidReenterPin:
+            errorMessage = "PIn does not match with the previous one, please try again"
+        case BiometricAuthenticationError.canceled:
+            return
+        case BiometricAuthenticationError.biometricLockout:
+            errorMessage = "Your biometrics authentication is locked"
+        case BiometricAuthenticationError.biometricNotConfigured:
+            errorMessage = "Your biometrics are not configured, please go to settings and enabled it"
+        case BiometricAuthenticationError.failed:
+            errorMessage = "Your biometrics authentication was not success, please try again"
         default:
             errorMessage = "error.unexpected_error".localized
         }

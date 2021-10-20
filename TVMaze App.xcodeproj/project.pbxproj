@@ -35,6 +35,9 @@
 		0E7F0A19271A8A8600E5162A /* TVMaze_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A18271A8A8600E5162A /* TVMaze_AppUITests.swift */; };
 		0E7F0A67271B05B700E5162A /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A66271B05B700E5162A /* StoryBoarded.swift */; };
 		0E7F0A6F271B05DE00E5162A /* StoryboardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A6E271B05DE00E5162A /* StoryboardsList.swift */; };
+		0E9A978D271F623800EE2343 /* PinAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A978C271F623800EE2343 /* PinAuthenticationType.swift */; };
+		0E9A9792271F7B8600EE2343 /* PinAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A9791271F7B8600EE2343 /* PinAuthenticationError.swift */; };
+		0E9A9798271FB7B700EE2343 /* LocalBiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */; };
 		0E9C097E271C6DFD0041190C /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C097D271C6DFD0041190C /* Data+Extensions.swift */; };
 		0E9C098C271C7B3D0041190C /* BaseEpisodeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C098B271C7B3D0041190C /* BaseEpisodeCollectionCell.swift */; };
 		0E9C099D271C7BAA0041190C /* EpisodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C099B271C7BAA0041190C /* EpisodeCollectionViewCell.swift */; };
@@ -143,6 +146,9 @@
 		0E7F0A1A271A8A8600E5162A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E7F0A66271B05B700E5162A /* StoryBoarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
 		0E7F0A6E271B05DE00E5162A /* StoryboardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsList.swift; sourceTree = "<group>"; };
+		0E9A978C271F623800EE2343 /* PinAuthenticationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAuthenticationType.swift; sourceTree = "<group>"; };
+		0E9A9791271F7B8600EE2343 /* PinAuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAuthenticationError.swift; sourceTree = "<group>"; };
+		0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBiometricAuthentication.swift; sourceTree = "<group>"; };
 		0E9C097D271C6DFD0041190C /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		0E9C098B271C7B3D0041190C /* BaseEpisodeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEpisodeCollectionCell.swift; sourceTree = "<group>"; };
 		0E9C099B271C7BAA0041190C /* EpisodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -467,6 +473,14 @@
 			path = Storyboarded;
 			sourceTree = "<group>";
 		};
+		0E9A9796271FB79500EE2343 /* BiometricsAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */,
+			);
+			path = BiometricsAuthentication;
+			sourceTree = "<group>";
+		};
 		0E9C0982271C7AE20041190C /* EpisodeCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +572,7 @@
 		0E9C0A01271E507D0041190C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				0E9A9796271FB79500EE2343 /* BiometricsAuthentication */,
 				0E9C0A54271E6FBB0041190C /* PinAuthentication */,
 				0E9C0A53271E6FAE0041190C /* AppSettings */,
 			);
@@ -686,6 +701,8 @@
 		0E9C0A6F271E6FE00041190C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				0E9A978C271F623800EE2343 /* PinAuthenticationType.swift */,
+				0E9A9791271F7B8600EE2343 /* PinAuthenticationError.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -965,6 +982,7 @@
 				0EDA49CF271B3D5B00C942D9 /* BaseAPIConfig.swift in Sources */,
 				0EDA49FA271B4C3300C942D9 /* ShowInfoModel.swift in Sources */,
 				0E9C09CF271CEAD20041190C /* EpisodesDetailViewController.swift in Sources */,
+				0E9A9798271FB7B700EE2343 /* LocalBiometricAuthentication.swift in Sources */,
 				0E9C0A75271E6FE00041190C /* PinAuthenticationViewController.swift in Sources */,
 				0E7F09F4271A8A7C00E5162A /* AppDelegate.swift in Sources */,
 				0E9C0A4F271E6DF50041190C /* DarkModeManager.swift in Sources */,
@@ -1011,7 +1029,9 @@
 				0E1378C0271BA9A5003F4E37 /* ShowDetailPresenter.swift in Sources */,
 				0E9C0A3D271E62730041190C /* SecureStoreKeys.swift in Sources */,
 				0EDA4A05271B557F00C942D9 /* BaseShowCell.swift in Sources */,
+				0E9A9792271F7B8600EE2343 /* PinAuthenticationError.swift in Sources */,
 				0E7F0A67271B05B700E5162A /* StoryBoarded.swift in Sources */,
+				0E9A978D271F623800EE2343 /* PinAuthenticationType.swift in Sources */,
 				0EDA493F271B171A00C942D9 /* ShowsSearchRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

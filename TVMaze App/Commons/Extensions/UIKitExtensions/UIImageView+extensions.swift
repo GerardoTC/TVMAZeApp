@@ -13,7 +13,7 @@ extension UIImageView {
             errorClosure?(nil)
             return
         }
-        DispatchQueue.global().async { [weak self] in
+        DispatchQueue(label: "ImageLoaderQueue").async { [weak self] in
             do {
                 let data = try Data(contentsOf: url)
                 if let image = UIImage(data: data) {

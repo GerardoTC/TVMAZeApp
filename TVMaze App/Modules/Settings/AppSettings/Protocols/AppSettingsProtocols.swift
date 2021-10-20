@@ -13,6 +13,8 @@ protocol AppSettingsInteractorProtocol: AnyObject {
     func setupPinValue(pin: String)
     func isPinOn() -> Bool
     func isBiometricsOn() -> Bool
+    func disableBiometrics()
+    func enableBiometrics()
 }
 
 protocol AppSettingsPresenterProtocol: AnyObject {
@@ -29,10 +31,11 @@ protocol AppSettingsPresenterProtocol: AnyObject {
 protocol AppSettingsInteractorOutputProtocol: AnyObject {
 }
 
-protocol AppSettingsRouterProtocol: AnyObject {
+protocol AppSettingsRouterProtocol: BaseRouterWithError {
     var viewController: UIViewController? { get set }
     
     static func createAppSettingsModule() -> AppSettingsViewController?
+    func routeToPin(validationType: PinAuthenticationType, delegate: PinDelegateResult)
 }
 
 protocol AppSettingsViewProtocol: AnyObject {

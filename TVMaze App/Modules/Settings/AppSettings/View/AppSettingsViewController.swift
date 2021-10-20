@@ -52,9 +52,12 @@ final class AppSettingsViewController: UIViewController, Storyboarded {
 
 extension AppSettingsViewController: AppSettingsViewProtocol {
     func updateSwitchesInfo(_ pinStatus: Bool, _ biometricsStatus: Bool, _ darkModeStatus: Bool) {
-        pinSwitch.isOn = pinStatus
-        biometricsSwitch.isOn = biometricsStatus
-        darkModeSwitch.isOn = darkModeStatus
-        DarkModeManager.updateDarkModeStatus(isOn: darkModeSwitch.isOn)
+        DispatchQueue.main.async {
+            self.pinSwitch.isOn = pinStatus
+            self.biometricsSwitch.isOn = biometricsStatus
+            self.darkModeSwitch.isOn = darkModeStatus
+            self.biometricsSwitch.isEnabled = pinStatus
+            DarkModeManager.updateDarkModeStatus(isOn: self.darkModeSwitch.isOn)
+        }
     }
 }

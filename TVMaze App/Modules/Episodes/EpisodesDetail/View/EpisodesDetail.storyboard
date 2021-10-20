@@ -75,7 +75,7 @@
                                     <constraint firstAttribute="bottom" secondItem="ZAK-QI-hm6" secondAttribute="bottom" id="QVP-km-tsf"/>
                                     <constraint firstItem="ZAK-QI-hm6" firstAttribute="leading" secondItem="pYj-E5-kmr" secondAttribute="leading" id="igJ-DF-6fF"/>
                                     <constraint firstAttribute="trailing" secondItem="ZAK-QI-hm6" secondAttribute="trailing" id="oca-Zo-TCE"/>
-                                    <constraint firstItem="ZAK-QI-hm6" firstAttribute="top" secondItem="pYj-E5-kmr" secondAttribute="top" priority="250" constant="450" id="qR0-f4-Z8f"/>
+                                    <constraint firstItem="ZAK-QI-hm6" firstAttribute="top" secondItem="pYj-E5-kmr" secondAttribute="top" constant="450" id="qR0-f4-Z8f"/>
                                 </constraints>
                             </scrollView>
                         </subviews>

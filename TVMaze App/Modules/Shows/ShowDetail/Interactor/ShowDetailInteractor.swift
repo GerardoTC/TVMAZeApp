@@ -14,7 +14,6 @@ final class ShowDetailInteractor: ShowDetailInteractorProtocol {
     }
     
     func getShowInfo(id: Int) {
-        
         let resource = NetworkResource<ShowDetailInfoModel>(requestInfo: MazeEndPoints.episodes(showId: id), parse: ShowDetailInfoModel.decode)
         
         network.getRequest(resource: resource) { [weak self] (result) in

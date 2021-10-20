@@ -29,5 +29,12 @@ final class AppSettingsRouter: AppSettingsRouterProtocol {
         ref?.presenter = presenter
         return ref
     }
+    
+    func routeToPin(validationType: PinAuthenticationType, delegate: PinDelegateResult) {
+        guard let vc = PinAuthenticationRouter.createPinAuthenticationModule(validationType: validationType, delegate: delegate) else { return }
+        let navController = UINavigationController(rootViewController: vc)
+        navController.modalPresentationStyle = .fullScreen
+        viewController?.present(navController, animated: true, completion: nil)
+    }
 }
 

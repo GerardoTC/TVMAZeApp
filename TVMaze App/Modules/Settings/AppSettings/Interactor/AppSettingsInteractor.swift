@@ -6,6 +6,7 @@
 //
 
 final class AppSettingsInteractor: AppSettingsInteractorProtocol {
+    
     weak var presenter: AppSettingsInteractorOutputProtocol?
     var secureStore: LocalStore
     var defaultStore: LocalStore
@@ -33,5 +34,13 @@ final class AppSettingsInteractor: AppSettingsInteractorProtocol {
     
     func isBiometricsOn() -> Bool {
         secureStore[SecureStoreKeys.biometricsOn.rawValue]
+    }
+    
+    func disableBiometrics() {
+        secureStore[SecureStoreKeys.biometricsOn.rawValue] = false
+    }
+    
+    func enableBiometrics() {
+        secureStore[SecureStoreKeys.biometricsOn.rawValue] = true
     }
 }
