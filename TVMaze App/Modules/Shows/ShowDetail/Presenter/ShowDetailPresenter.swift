@@ -19,6 +19,11 @@ final class ShowDetailPresenter: ShowDetailPresenterProtocol {
         view?.startLoading()
     }
     
+    func setupFavorite() {
+        let isFavorite = interactor?.isFavoriteShow(id: showId ?? 0) ?? false
+        view?.updateButton(isFavorite: isFavorite)
+    }
+    
     func episodesCount() -> Int {
         episodes.count
     }
@@ -50,6 +55,16 @@ final class ShowDetailPresenter: ShowDetailPresenterProtocol {
         episode.showPoster = showInfo?.poster
         router?.routeToEpisodeDetail(episode)
     }
+    
+    func likebuttonPressed() {
+        if interactor?.isFavoriteShow(id: showId ?? 0) ?? false {
+            interactor?.removeShow(id: showId ?? 0)
+            view?.updateButton(isFavorite: false)
+        } else {
+            interactor?.addToFavoriteShows(showInfo, showId: showId ?? 0)
+            view?.updateButton(isFavorite: true)
+        }
+    }
 }
 
 extension ShowDetailPresenter: ShowDetailInteractorOutputProtocol {
@@ -64,6 +79,7 @@ extension ShowDetailPresenter: ShowDetailInteractorOutputProtocol {
             view?.hideEpisodes()
         }
         view?.stopLoading()
+        setupFavorite()
     }
     
     func handle(error: Error) {

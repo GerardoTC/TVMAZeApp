@@ -18,6 +18,7 @@ final class ShowDetailViewController: UIViewController, Storyboarded {
     @IBOutlet weak var pickerImage: UIImageView!
     @IBOutlet weak var loadingView: UILoadingView!
     @IBOutlet weak var seasonPickerView: UIView!
+    @IBOutlet weak var likeButton: UIButton!
     var seasonPicker: UIPickerView = UIPickerView()
     
     var presenter: ShowDetailPresenterProtocol?
@@ -98,10 +99,21 @@ final class ShowDetailViewController: UIViewController, Storyboarded {
             }
         }
     }
+    
+    @IBAction func likeButtonPressed(_ sender: Any) {
+        presenter?.likebuttonPressed()
+    }
+    
 }
 
 //MARK: - ShowDetailViewProtocol
 extension ShowDetailViewController: ShowDetailViewProtocol {
+    func updateButton(isFavorite: Bool) {
+        DispatchQueue.main.async {
+            self.likeButton.setImage(IconProvider.favoriteImage(fill: isFavorite).image, for: .normal)
+        }
+    }
+    
     func updateEpisodesList() {
         DispatchQueue.main.async { [unowned self] in
             episodesList.reloadData()
@@ -126,6 +138,10 @@ extension ShowDetailViewController: ShowDetailViewProtocol {
             self?.episodesTitle.isHidden = true
             self?.seasonPickerView.isHidden = true
         }
+    }
+    
+    func updateLikeButton(isFavorite: Bool) {
+        likeButton.imageView?.image = IconProvider.appSettingsIcon.image
     }
 }
 

@@ -9,6 +9,9 @@ import UIKit
 protocol ShowDetailInteractorProtocol: AnyObject {
     var presenter: ShowDetailInteractorOutputProtocol? { get set }
     func getShowInfo(id: Int)
+    func isFavoriteShow(id: Int) -> Bool
+    func removeShow(id: Int)
+    func addToFavoriteShows(_ showInfo: ShowInfoDetail?, showId: Int)
 }
 
 protocol ShowDetailPresenterProtocol: AnyObject {
@@ -24,6 +27,7 @@ protocol ShowDetailPresenterProtocol: AnyObject {
     func seasonTitle(for: Int) -> String
     func seasonSelected(_ item: Int)
     func didSelect(episode: Int)
+    func likebuttonPressed()
 }
 
 protocol ShowDetailInteractorOutputProtocol: BasePresenterWithError {
@@ -44,4 +48,5 @@ protocol ShowDetailViewProtocol: AnyObject {
     func hideEpisodes()
     func startLoading()
     func stopLoading()
+    func updateButton(isFavorite: Bool)
 }
