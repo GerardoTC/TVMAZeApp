@@ -14,4 +14,3 @@ protocol LocalShowsDatabase {
     func showExists(_ id: Int) -> Bool
     func getAllFavoriteShows() -> Result<[ShowInfoModel], Error>
 }
-

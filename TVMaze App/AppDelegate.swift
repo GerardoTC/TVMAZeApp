@@ -24,18 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupFirstVC() {
-        
-        
         guard let showsListViewController = ShowsSearchRouter.createShowsSearchModule(),
-              let appSettings = AppSettingsRouter.createAppSettingsModule()
+              let appSettings = AppSettingsRouter.createAppSettingsModule(),
+              let favoritesList = FavoriteShowsListRouter.createFavoriteShowsListModule()
         else { return }
         let navigationController = UINavigationController(rootViewController: showsListViewController)
         navigationController.navigationBar.tintColor = BaseColorPalette.accentColor.color
         navigationController.tabBarItem = UITabBarItem(title: "Shows", image: IconProvider.showsTabIcon.image, selectedImage: IconProvider.showsTabIcon.image)
         
-        
+        let navigationControllerFavorites = UINavigationController(rootViewController: favoritesList)
         appSettings.tabBarItem = UITabBarItem(title: "Settings", image: IconProvider.appSettingsIcon.image, selectedImage: IconProvider.appSettingsIcon.image)
-        tabBar.setViewControllers([navigationController, appSettings], animated: false)
+        favoritesList.tabBarItem = UITabBarItem(title: "Favorites", image: IconProvider.favoriteImage(fill: false).image, selectedImage: IconProvider.favoriteImage(fill: true).image)
+        tabBar.setViewControllers([navigationController, navigationControllerFavorites, appSettings], animated: false)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.tintColor = BaseColorPalette.tintColor.color
         window?.rootViewController = tabBar

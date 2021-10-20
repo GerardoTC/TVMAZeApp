@@ -35,6 +35,12 @@
 		0E7F0A19271A8A8600E5162A /* TVMaze_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A18271A8A8600E5162A /* TVMaze_AppUITests.swift */; };
 		0E7F0A67271B05B700E5162A /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A66271B05B700E5162A /* StoryBoarded.swift */; };
 		0E7F0A6F271B05DE00E5162A /* StoryboardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A6E271B05DE00E5162A /* StoryboardsList.swift */; };
+		0E998E41272052E000300CC2 /* FavoriteShowsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E37272052E000300CC2 /* FavoriteShowsListInteractor.swift */; };
+		0E998E42272052E000300CC2 /* FavoriteShowsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E39272052E000300CC2 /* FavoriteShowsListRouter.swift */; };
+		0E998E43272052E000300CC2 /* FavoriteShowsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E3B272052E000300CC2 /* FavoriteShowsListProtocols.swift */; };
+		0E998E44272052E000300CC2 /* FavoriteShowsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E3D272052E000300CC2 /* FavoriteShowsListPresenter.swift */; };
+		0E998E45272052E000300CC2 /* FavoriteShowsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E3F272052E000300CC2 /* FavoriteShowsListViewController.swift */; };
+		0E998E4A2720568D00300CC2 /* FavoriteShowsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E998E492720568D00300CC2 /* FavoriteShowsList.storyboard */; };
 		0E9A978D271F623800EE2343 /* PinAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A978C271F623800EE2343 /* PinAuthenticationType.swift */; };
 		0E9A9792271F7B8600EE2343 /* PinAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A9791271F7B8600EE2343 /* PinAuthenticationError.swift */; };
 		0E9A9798271FB7B700EE2343 /* LocalBiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */; };
@@ -148,6 +154,12 @@
 		0E7F0A1A271A8A8600E5162A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E7F0A66271B05B700E5162A /* StoryBoarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
 		0E7F0A6E271B05DE00E5162A /* StoryboardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsList.swift; sourceTree = "<group>"; };
+		0E998E37272052E000300CC2 /* FavoriteShowsListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteShowsListInteractor.swift; sourceTree = "<group>"; };
+		0E998E39272052E000300CC2 /* FavoriteShowsListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteShowsListRouter.swift; sourceTree = "<group>"; };
+		0E998E3B272052E000300CC2 /* FavoriteShowsListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteShowsListProtocols.swift; sourceTree = "<group>"; };
+		0E998E3D272052E000300CC2 /* FavoriteShowsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteShowsListPresenter.swift; sourceTree = "<group>"; };
+		0E998E3F272052E000300CC2 /* FavoriteShowsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteShowsListViewController.swift; sourceTree = "<group>"; };
+		0E998E492720568D00300CC2 /* FavoriteShowsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteShowsList.storyboard; sourceTree = "<group>"; };
 		0E9A978C271F623800EE2343 /* PinAuthenticationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAuthenticationType.swift; sourceTree = "<group>"; };
 		0E9A9791271F7B8600EE2343 /* PinAuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAuthenticationError.swift; sourceTree = "<group>"; };
 		0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBiometricAuthentication.swift; sourceTree = "<group>"; };
@@ -432,7 +444,6 @@
 				0E7F09FF271A8A8600E5162A /* Assets.xcassets */,
 				0E7F0A01271A8A8600E5162A /* LaunchScreen.storyboard */,
 				0E7F0A04271A8A8600E5162A /* Info.plist */,
-				0E7F09FC271A8A7D00E5162A /* ShowDetailDataBase.xcdatamodeld */,
 				0EDA49B9271B29DC00C942D9 /* Localizable.strings */,
 			);
 			path = "TVMaze App";
@@ -482,8 +493,72 @@
 		0E998E13271FD31A00300CC2 /* FavoriteShows */ = {
 			isa = PBXGroup;
 			children = (
+				0E998E40272052E000300CC2 /* Entity */,
+				0E998E36272052E000300CC2 /* Interactor */,
+				0E998E3C272052E000300CC2 /* Presenter */,
+				0E998E3A272052E000300CC2 /* Protocols */,
+				0E998E38272052E000300CC2 /* Router */,
+				0E998E3E272052E000300CC2 /* View */,
 			);
 			path = FavoriteShows;
+			sourceTree = "<group>";
+		};
+		0E998E20272051D900300CC2 /* ShowDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0E7F09FC271A8A7D00E5162A /* ShowDetailDataBase.xcdatamodeld */,
+				0E9A97A6271FC86500EE2343 /* LocalShowsDataBase.swift */,
+				0E9A97B1271FCAB900EE2343 /* LocalShowsDataController.swift */,
+			);
+			path = ShowDetail;
+			sourceTree = "<group>";
+		};
+		0E998E36272052E000300CC2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0E998E37272052E000300CC2 /* FavoriteShowsListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0E998E38272052E000300CC2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0E998E39272052E000300CC2 /* FavoriteShowsListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0E998E3A272052E000300CC2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0E998E3B272052E000300CC2 /* FavoriteShowsListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0E998E3C272052E000300CC2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0E998E3D272052E000300CC2 /* FavoriteShowsListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0E998E3E272052E000300CC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E998E3F272052E000300CC2 /* FavoriteShowsListViewController.swift */,
+				0E998E492720568D00300CC2 /* FavoriteShowsList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E998E40272052E000300CC2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		0E9A9796271FB79500EE2343 /* BiometricsAuthentication */ = {
@@ -497,8 +572,7 @@
 		0E9A97A5271FC84A00EE2343 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				0E9A97A6271FC86500EE2343 /* LocalShowsDataBase.swift */,
-				0E9A97B1271FCAB900EE2343 /* LocalShowsDataController.swift */,
+				0E998E20272051D900300CC2 /* ShowDetail */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -952,6 +1026,7 @@
 				0EDA4964271B260300C942D9 /* ShowTableViewCell.xib in Resources */,
 				0E9C0A7B271E6FF20041190C /* PinAuthentication.storyboard in Resources */,
 				0E73F942271B0F560031DFC0 /* Montserrat-Regular.ttf in Resources */,
+				0E998E4A2720568D00300CC2 /* FavoriteShowsList.storyboard in Resources */,
 				0E9C0A28271E51110041190C /* AppSettings.storyboard in Resources */,
 				0E7F0A03271A8A8600E5162A /* LaunchScreen.storyboard in Resources */,
 				0EDA49BA271B29DC00C942D9 /* Localizable.strings in Resources */,
@@ -990,6 +1065,8 @@
 				0E9C098C271C7B3D0041190C /* BaseEpisodeCollectionCell.swift in Sources */,
 				0E9C0A33271E61360041190C /* LocalStore.swift in Sources */,
 				0E9C0A21271E50C10041190C /* AppSettingsPresenter.swift in Sources */,
+				0E998E44272052E000300CC2 /* FavoriteShowsListPresenter.swift in Sources */,
+				0E998E42272052E000300CC2 /* FavoriteShowsListRouter.swift in Sources */,
 				0E9A97A7271FC86500EE2343 /* LocalShowsDataBase.swift in Sources */,
 				0EDA4A0A271B563600C942D9 /* UIImageView+extensions.swift in Sources */,
 				0E1378D0271C51BF003F4E37 /* EpisodeInfo.swift in Sources */,
@@ -1043,18 +1120,21 @@
 				0EDA49EB271B45F600C942D9 /* NetworkError.swift in Sources */,
 				0E9C09CC271CEAD20041190C /* EpisodesDetailPresenter.swift in Sources */,
 				0E73F949271B0FD90031DFC0 /* FontStyleRegister.swift in Sources */,
+				0E998E43272052E000300CC2 /* FavoriteShowsListProtocols.swift in Sources */,
 				0E9C0A76271E6FE00041190C /* PinAuthenticationPresenter.swift in Sources */,
 				0E9C09FA271E48680041190C /* IconProvider.swift in Sources */,
 				0EDA4940271B171A00C942D9 /* ShowsSearchInteractor.swift in Sources */,
 				0E9C0A2E271E612C0041190C /* SecureStore.swift in Sources */,
 				0E9C097E271C6DFD0041190C /* Data+Extensions.swift in Sources */,
 				0E73F935271B0D690031DFC0 /* UIFont+Extensions.swift in Sources */,
+				0E998E41272052E000300CC2 /* FavoriteShowsListInteractor.swift in Sources */,
 				0E9C0A72271E6FE00041190C /* PinAuthenticationInteractor.swift in Sources */,
 				0E1378C0271BA9A5003F4E37 /* ShowDetailPresenter.swift in Sources */,
 				0E9C0A3D271E62730041190C /* SecureStoreKeys.swift in Sources */,
 				0EDA4A05271B557F00C942D9 /* BaseShowCell.swift in Sources */,
 				0E9A9792271F7B8600EE2343 /* PinAuthenticationError.swift in Sources */,
 				0E7F0A67271B05B700E5162A /* StoryBoarded.swift in Sources */,
+				0E998E45272052E000300CC2 /* FavoriteShowsListViewController.swift in Sources */,
 				0E9A978D271F623800EE2343 /* PinAuthenticationType.swift in Sources */,
 				0EDA493F271B171A00C942D9 /* ShowsSearchRouter.swift in Sources */,
 			);

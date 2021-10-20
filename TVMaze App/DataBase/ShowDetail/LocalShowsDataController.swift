@@ -64,6 +64,7 @@ class LocalShowsDataController: LocalShowsDatabase {
     
     func getAllFavoriteShows() -> Result<[ShowInfoModel], Error> {
         let fetchRequest: NSFetchRequest<ShowInfoDatabaseModel> = ShowInfoDatabaseModel.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: false)]
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                               managedObjectContext: viewContext,
                                                               sectionNameKeyPath: nil,
