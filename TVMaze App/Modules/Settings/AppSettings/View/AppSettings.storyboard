@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--App Settings View Controller-->
+        <scene sceneID="7Ss-9T-H1i">
+            <objects>
+                <viewController storyboardIdentifier="AppSettingsViewController" id="9p2-M9-fFY" customClass="AppSettingsViewController" customModule="TVMaze_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F0A-AC-ShN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ito-aW-CvL">
+                                <rect key="frame" x="16" y="76" width="366" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN Authentication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYQ-cx-FZZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y8p-wx-XPi">
+                                        <rect key="frame" x="317" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="pinValueChanged:" destination="9p2-M9-fFY" eventType="valueChanged" id="jdV-7L-4lO"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V5v-ox-v6Q">
+                                <rect key="frame" x="16" y="123" width="366" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biometrics Authentication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgR-mi-9KB">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0WX-mH-fyy">
+                                        <rect key="frame" x="317" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="biometricsValueChanged:" destination="9p2-M9-fFY" eventType="valueChanged" id="zcA-uL-rJl"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TnU-zh-2xb">
+                                <rect key="frame" x="16" y="170" width="366" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcw-xI-aNm">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="afq-6x-7dR">
+                                        <rect key="frame" x="317" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="darkModeValueChanged:" destination="9p2-M9-fFY" eventType="valueChanged" id="Iga-F1-gk7"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CQk-Bb-b2m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TnU-zh-2xb" firstAttribute="top" secondItem="V5v-ox-v6Q" secondAttribute="bottom" constant="16" id="4DY-a0-ppQ"/>
+                            <constraint firstItem="V5v-ox-v6Q" firstAttribute="top" secondItem="ito-aW-CvL" secondAttribute="bottom" constant="16" id="4Qu-BS-3ut"/>
+                            <constraint firstItem="ito-aW-CvL" firstAttribute="top" secondItem="CQk-Bb-b2m" secondAttribute="top" constant="32" id="Eo1-5x-tfP"/>
+                            <constraint firstItem="CQk-Bb-b2m" firstAttribute="trailing" secondItem="V5v-ox-v6Q" secondAttribute="trailing" constant="32" id="Nvp-Xb-vqG"/>
+                            <constraint firstItem="CQk-Bb-b2m" firstAttribute="trailing" secondItem="TnU-zh-2xb" secondAttribute="trailing" constant="32" id="OlT-qq-h9k"/>
+                            <constraint firstItem="CQk-Bb-b2m" firstAttribute="trailing" secondItem="ito-aW-CvL" secondAttribute="trailing" constant="32" id="TfY-Id-aCq"/>
+                            <constraint firstItem="ito-aW-CvL" firstAttribute="leading" secondItem="CQk-Bb-b2m" secondAttribute="leading" constant="16" id="dvL-0C-flb"/>
+                            <constraint firstItem="V5v-ox-v6Q" firstAttribute="leading" secondItem="CQk-Bb-b2m" secondAttribute="leading" constant="16" id="hzO-Te-3EZ"/>
+                            <constraint firstItem="TnU-zh-2xb" firstAttribute="leading" secondItem="CQk-Bb-b2m" secondAttribute="leading" constant="16" id="qOm-t1-nR8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="biometricsSwitch" destination="0WX-mH-fyy" id="nXl-T2-jyk"/>
+                        <outlet property="biometricsTitle" destination="HgR-mi-9KB" id="ItL-RQ-w4R"/>
+                        <outlet property="darkModeSwitch" destination="afq-6x-7dR" id="2m7-4I-whG"/>
+                        <outlet property="darkModeTitle" destination="vcw-xI-aNm" id="Ics-7w-0bC"/>
+                        <outlet property="pinSwitch" destination="Y8p-wx-XPi" id="yIC-fU-qbZ"/>
+                        <outlet property="pinTitle" destination="hYQ-cx-FZZ" id="VGY-Ky-Hpp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIM-gR-m9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -179,6 +179,7 @@
                         <outlet property="loadingView" destination="14J-Tt-dfz" id="tav-gU-g4b"/>
                         <outlet property="pickerImage" destination="M4R-u4-vpX" id="a0o-OB-VTu"/>
                         <outlet property="poster" destination="0Di-Kh-bl6" id="wcR-pX-uqj"/>
+                        <outlet property="seasonPickerView" destination="ROh-z2-f6S" id="aii-wH-tt0"/>
                         <outlet property="seasonsInput" destination="INY-Lr-ZzO" id="tS3-fn-L97"/>
                         <outlet property="showInfo" destination="wHH-05-dVl" id="2oi-in-D3z"/>
                         <outlet property="showName" destination="0AP-G1-F0f" id="IDm-o2-u5Z"/>

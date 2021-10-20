@@ -10,7 +10,7 @@ import Foundation
 struct ShowDetailInfoModel: Decodable {
     var name: String
     var id: Int
-    var summary: String
+    var summary: String?
     var schedule: Schedule
     var genres: [String]
     var image: ImageSizes?
