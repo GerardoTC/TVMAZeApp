@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="erX-MG-7PP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1109"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1161"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Di-Kh-bl6">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
@@ -33,14 +33,23 @@
                                                     <constraint firstAttribute="height" constant="450" id="loc-3K-hQu"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIk-Uf-Ibj">
+                                                <rect key="frame" x="0.0" y="466" width="414" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" name="TintColor"/>
+                                                <state key="normal" image="suit.heart" catalog="system"/>
+                                                <connections>
+                                                    <action selector="likeButtonPressed:" destination="May-nU-iBh" eventType="touchUpInside" id="4CC-N5-u08"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AP-G1-F0f">
-                                                <rect key="frame" x="0.0" y="466" width="414" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="518" width="414" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F02-ae-QK9">
-                                                <rect key="frame" x="0.0" y="501.5" width="414" height="60.5"/>
+                                                <rect key="frame" x="0.0" y="553.5" width="414" height="60.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres and day and time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHH-05-dVl" userLabel="Genre">
                                                         <rect key="frame" x="16" y="0.0" width="382" height="60.5"/>
@@ -58,7 +67,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QnW-58-EvP">
-                                                <rect key="frame" x="0.0" y="578" width="414" height="60.5"/>
+                                                <rect key="frame" x="0.0" y="630" width="414" height="60.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="summary" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnk-3B-sE6">
                                                         <rect key="frame" x="16" y="0.0" width="382" height="60.5"/>
@@ -76,7 +85,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROh-z2-f6S">
-                                                <rect key="frame" x="0.0" y="654.5" width="414" height="62"/>
+                                                <rect key="frame" x="0.0" y="706.5" width="414" height="62"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Season 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="INY-Lr-ZzO">
                                                         <rect key="frame" x="16" y="0.0" width="68" height="62"/>
@@ -101,7 +110,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwO-x8-B7J">
-                                                <rect key="frame" x="0.0" y="732.5" width="414" height="60.5"/>
+                                                <rect key="frame" x="0.0" y="784.5" width="414" height="60.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="310" verticalHuggingPriority="251" text="Episodes:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iah-S2-hNk" userLabel="Episodes">
                                                         <rect key="frame" x="16" y="0.0" width="382" height="60.5"/>
@@ -119,7 +128,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1Y-Gc-5aS">
-                                                <rect key="frame" x="0.0" y="809" width="414" height="300"/>
+                                                <rect key="frame" x="0.0" y="861" width="414" height="300"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="350" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3e4-yk-Bhm">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -176,6 +185,7 @@
                     <connections>
                         <outlet property="episodesList" destination="3e4-yk-Bhm" id="fgS-Ap-dSa"/>
                         <outlet property="episodesTitle" destination="iah-S2-hNk" id="agl-e7-6KE"/>
+                        <outlet property="likeButton" destination="WIk-Uf-Ibj" id="fke-F1-iD9"/>
                         <outlet property="loadingView" destination="14J-Tt-dfz" id="tav-gU-g4b"/>
                         <outlet property="pickerImage" destination="M4R-u4-vpX" id="a0o-OB-VTu"/>
                         <outlet property="poster" destination="0Di-Kh-bl6" id="wcR-pX-uqj"/>
@@ -193,6 +203,7 @@
     </scenes>
     <resources>
         <image name="arrowtriangle.down.square.fill" catalog="system" width="128" height="114"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
         <namedColor name="BgColorSecondary">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

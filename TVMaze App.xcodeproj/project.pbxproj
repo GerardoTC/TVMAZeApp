@@ -28,7 +28,7 @@
 		0E73F957271B121E0031DFC0 /* ShowsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73F956271B121E0031DFC0 /* ShowsSearchViewController.swift */; };
 		0E7F09F4271A8A7C00E5162A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F09F3271A8A7C00E5162A /* AppDelegate.swift */; };
 		0E7F09FB271A8A7D00E5162A /* ShowsSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7F09F9271A8A7D00E5162A /* ShowsSearch.storyboard */; };
-		0E7F09FE271A8A7D00E5162A /* TVMaze_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F09FC271A8A7D00E5162A /* TVMaze_App.xcdatamodeld */; };
+		0E7F09FE271A8A7D00E5162A /* ShowDetailDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F09FC271A8A7D00E5162A /* ShowDetailDataBase.xcdatamodeld */; };
 		0E7F0A00271A8A8600E5162A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7F09FF271A8A8600E5162A /* Assets.xcassets */; };
 		0E7F0A03271A8A8600E5162A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7F0A01271A8A8600E5162A /* LaunchScreen.storyboard */; };
 		0E7F0A0E271A8A8600E5162A /* TVMaze_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A0D271A8A8600E5162A /* TVMaze_AppTests.swift */; };
@@ -38,6 +38,8 @@
 		0E9A978D271F623800EE2343 /* PinAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A978C271F623800EE2343 /* PinAuthenticationType.swift */; };
 		0E9A9792271F7B8600EE2343 /* PinAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A9791271F7B8600EE2343 /* PinAuthenticationError.swift */; };
 		0E9A9798271FB7B700EE2343 /* LocalBiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */; };
+		0E9A97A7271FC86500EE2343 /* LocalShowsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A97A6271FC86500EE2343 /* LocalShowsDataBase.swift */; };
+		0E9A97B2271FCAB900EE2343 /* LocalShowsDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A97B1271FCAB900EE2343 /* LocalShowsDataController.swift */; };
 		0E9C097E271C6DFD0041190C /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C097D271C6DFD0041190C /* Data+Extensions.swift */; };
 		0E9C098C271C7B3D0041190C /* BaseEpisodeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C098B271C7B3D0041190C /* BaseEpisodeCollectionCell.swift */; };
 		0E9C099D271C7BAA0041190C /* EpisodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C099B271C7BAA0041190C /* EpisodeCollectionViewCell.swift */; };
@@ -149,6 +151,8 @@
 		0E9A978C271F623800EE2343 /* PinAuthenticationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAuthenticationType.swift; sourceTree = "<group>"; };
 		0E9A9791271F7B8600EE2343 /* PinAuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAuthenticationError.swift; sourceTree = "<group>"; };
 		0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBiometricAuthentication.swift; sourceTree = "<group>"; };
+		0E9A97A6271FC86500EE2343 /* LocalShowsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalShowsDataBase.swift; sourceTree = "<group>"; };
+		0E9A97B1271FCAB900EE2343 /* LocalShowsDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalShowsDataController.swift; sourceTree = "<group>"; };
 		0E9C097D271C6DFD0041190C /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		0E9C098B271C7B3D0041190C /* BaseEpisodeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEpisodeCollectionCell.swift; sourceTree = "<group>"; };
 		0E9C099B271C7BAA0041190C /* EpisodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -305,6 +309,7 @@
 		0E73F90D271B09710031DFC0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0E998E13271FD31A00300CC2 /* FavoriteShows */,
 				0E9C0A01271E507D0041190C /* Settings */,
 				0E9C09AD271CEA9F0041190C /* Episodes */,
 				0E73F91A271B0A4D0031DFC0 /* Shows */,
@@ -417,6 +422,7 @@
 		0E7F09F2271A8A7C00E5162A /* TVMaze App */ = {
 			isa = PBXGroup;
 			children = (
+				0E9A97A5271FC84A00EE2343 /* DataBase */,
 				0E9C0A2C271E61190041190C /* DataStore */,
 				0E73F90D271B09710031DFC0 /* Modules */,
 				0EDA49C3271B375A00C942D9 /* Networking */,
@@ -426,7 +432,7 @@
 				0E7F09FF271A8A8600E5162A /* Assets.xcassets */,
 				0E7F0A01271A8A8600E5162A /* LaunchScreen.storyboard */,
 				0E7F0A04271A8A8600E5162A /* Info.plist */,
-				0E7F09FC271A8A7D00E5162A /* TVMaze_App.xcdatamodeld */,
+				0E7F09FC271A8A7D00E5162A /* ShowDetailDataBase.xcdatamodeld */,
 				0EDA49B9271B29DC00C942D9 /* Localizable.strings */,
 			);
 			path = "TVMaze App";
@@ -473,12 +479,28 @@
 			path = Storyboarded;
 			sourceTree = "<group>";
 		};
+		0E998E13271FD31A00300CC2 /* FavoriteShows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteShows;
+			sourceTree = "<group>";
+		};
 		0E9A9796271FB79500EE2343 /* BiometricsAuthentication */ = {
 			isa = PBXGroup;
 			children = (
 				0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */,
 			);
 			path = BiometricsAuthentication;
+			sourceTree = "<group>";
+		};
+		0E9A97A5271FC84A00EE2343 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				0E9A97A6271FC86500EE2343 /* LocalShowsDataBase.swift */,
+				0E9A97B1271FCAB900EE2343 /* LocalShowsDataController.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		0E9C0982271C7AE20041190C /* EpisodeCell */ = {
@@ -968,6 +990,7 @@
 				0E9C098C271C7B3D0041190C /* BaseEpisodeCollectionCell.swift in Sources */,
 				0E9C0A33271E61360041190C /* LocalStore.swift in Sources */,
 				0E9C0A21271E50C10041190C /* AppSettingsPresenter.swift in Sources */,
+				0E9A97A7271FC86500EE2343 /* LocalShowsDataBase.swift in Sources */,
 				0EDA4A0A271B563600C942D9 /* UIImageView+extensions.swift in Sources */,
 				0E1378D0271C51BF003F4E37 /* EpisodeInfo.swift in Sources */,
 				0E9C09DA271DCFE10041190C /* UILoadingView.swift in Sources */,
@@ -988,7 +1011,7 @@
 				0E9C0A4F271E6DF50041190C /* DarkModeManager.swift in Sources */,
 				0E1378BD271BA9A5003F4E37 /* ShowDetailInteractor.swift in Sources */,
 				0EDA49E3271B447800C942D9 /* MazeAPI.swift in Sources */,
-				0E7F09FE271A8A7D00E5162A /* TVMaze_App.xcdatamodeld in Sources */,
+				0E7F09FE271A8A7D00E5162A /* ShowDetailDataBase.xcdatamodeld in Sources */,
 				0E1378BE271BA9A5003F4E37 /* ShowDetailProtocols.swift in Sources */,
 				0E73F957271B121E0031DFC0 /* ShowsSearchViewController.swift in Sources */,
 				0E9C0A47271E637D0041190C /* String+SHA256.swift in Sources */,
@@ -997,6 +1020,7 @@
 				0E9C0A74271E6FE00041190C /* PinAuthenticationRouter.swift in Sources */,
 				0E1378CB271BAD83003F4E37 /* ShowDetailInfoModel.swift in Sources */,
 				0E9C09E7271E38110041190C /* BaseRouterWithError.swift in Sources */,
+				0E9A97B2271FCAB900EE2343 /* LocalShowsDataController.swift in Sources */,
 				0EDA49DB271B443A00C942D9 /* BaseAPIMethods.swift in Sources */,
 				0EDA49C5271B384400C942D9 /* BaseAPI.swift in Sources */,
 				0E9C099D271C7BAA0041190C /* EpisodeCollectionViewCell.swift in Sources */,
@@ -1208,8 +1232,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U36UQ45Q8Y;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "TVMaze App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1218,6 +1242,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "GerardTVMazeChallenge.TVMaze-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1228,8 +1253,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U36UQ45Q8Y;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "TVMaze App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1238,6 +1263,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "GerardTVMazeChallenge.TVMaze-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1365,13 +1391,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0E7F09FC271A8A7D00E5162A /* TVMaze_App.xcdatamodeld */ = {
+		0E7F09FC271A8A7D00E5162A /* ShowDetailDataBase.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				0E7F09FD271A8A7D00E5162A /* TVMaze_App.xcdatamodel */,
 			);
 			currentVersion = 0E7F09FD271A8A7D00E5162A /* TVMaze_App.xcdatamodel */;
-			path = TVMaze_App.xcdatamodeld;
+			path = ShowDetailDataBase.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

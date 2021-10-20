@@ -7,10 +7,14 @@
 import Foundation
 
 final class ShowDetailInteractor: ShowDetailInteractorProtocol {
+    
     weak var presenter: ShowDetailInteractorOutputProtocol?
     var network: BaseAPIProtocol
-    init(network: BaseAPIProtocol = MazeAPI()) {
+    var database: LocalShowsDatabase
+    init(network: BaseAPIProtocol = MazeAPI(),
+         database: LocalShowsDatabase = LocalShowsDataController()) {
         self.network = network
+        self.database = database
     }
     
     func getShowInfo(id: Int) {
@@ -53,5 +57,20 @@ final class ShowDetailInteractor: ShowDetailInteractorProtocol {
                                                        schedule: [ result.schedule.days.joined(separator: ","), "\(result.schedule.time)"].joined(separator: " • "),
                                                        poster: result.image?.original),
                                   seasons: seasonsDict)
+    }
+    
+    func isFavoriteShow(id: Int) -> Bool {
+        database.showExists(id)
+    }
+    
+    func removeShow(id: Int) {
+        database.deleteShow(id)
+    }
+    
+    func addToFavoriteShows(_ showInfo: ShowInfoDetail?, showId: Int) {
+        let show: ShowInfoModel = ShowInfoModel(id: showId, name: showInfo?.title ?? "",
+                                                summary: showInfo?.summary,
+                                                image: ImageSizes(medium: showInfo?.poster))
+        database.saveShow(show)
     }
 }
