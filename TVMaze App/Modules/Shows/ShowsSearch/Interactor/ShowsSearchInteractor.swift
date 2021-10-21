@@ -24,7 +24,7 @@ final class ShowsSearchInteractor: ShowsSearchInteractorProtocol {
             case .success(let shows):
                 self?.presenter?.updateShowsSearch(shows: shows)
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.presenter?.handle(error: error)
             }
         }
     }
