@@ -12,8 +12,12 @@ final class ShowsSearchPresenter: ShowsSearchPresenterProtocol {
     var interactor: ShowsSearchInteractorProtocol?
     var showsSearch: [BaseShowInfoModel] = []
     var showsList: [BaseShowInfoModel] = []
-    let debouncer: TextDebouncer = TextDebouncer(timeInterval: 0.5)
+    var debouncer: TextDebouncerProtocol
     var page = 0
+    
+    init(debouncer: TextDebouncerProtocol = TextDebouncer(timeInterval: 0.5)) {
+        self.debouncer = debouncer
+    }
     
     private func registerDebouncer() {
         debouncer.closure =  { [weak self] text in

@@ -9,7 +9,7 @@ import Foundation
 
 class MazeAPI: BaseAPIProtocol {
     @discardableResult
-    func getRequest<T>(resource: NetworkResource<T>, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionTask {
+    func getRequest<T>(resource: NetworkResource<T>, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionTask? {
         let datatask = URLSession.shared.dataTask(with: resource.request) { (data, response, error) in
             completion(
                 Result { [weak self] in

@@ -31,7 +31,6 @@
 		0E7F09FE271A8A7D00E5162A /* ShowDetailDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F09FC271A8A7D00E5162A /* ShowDetailDataBase.xcdatamodeld */; };
 		0E7F0A00271A8A8600E5162A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7F09FF271A8A8600E5162A /* Assets.xcassets */; };
 		0E7F0A03271A8A8600E5162A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7F0A01271A8A8600E5162A /* LaunchScreen.storyboard */; };
-		0E7F0A0E271A8A8600E5162A /* TVMaze_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A0D271A8A8600E5162A /* TVMaze_AppTests.swift */; };
 		0E7F0A19271A8A8600E5162A /* TVMaze_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A18271A8A8600E5162A /* TVMaze_AppUITests.swift */; };
 		0E7F0A67271B05B700E5162A /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A66271B05B700E5162A /* StoryBoarded.swift */; };
 		0E7F0A6F271B05DE00E5162A /* StoryboardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0A6E271B05DE00E5162A /* StoryboardsList.swift */; };
@@ -41,6 +40,13 @@
 		0E998E44272052E000300CC2 /* FavoriteShowsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E3D272052E000300CC2 /* FavoriteShowsListPresenter.swift */; };
 		0E998E45272052E000300CC2 /* FavoriteShowsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998E3F272052E000300CC2 /* FavoriteShowsListViewController.swift */; };
 		0E998E4A2720568D00300CC2 /* FavoriteShowsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E998E492720568D00300CC2 /* FavoriteShowsList.storyboard */; };
+		0E998EB72720C83200300CC2 /* NetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998EB62720C83200300CC2 /* NetworkingMock.swift */; };
+		0E998EC02720C87500300CC2 /* DataStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998EBF2720C87500300CC2 /* DataStoreMock.swift */; };
+		0E998ECB2720C9F800300CC2 /* LocalShowsDataBaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998ECA2720C9F800300CC2 /* LocalShowsDataBaseMock.swift */; };
+		0E998ED52720CC5E00300CC2 /* LocalBiometricAuthenticationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998ED42720CC5E00300CC2 /* LocalBiometricAuthenticationManagerMock.swift */; };
+		0E998EE02720CD4500300CC2 /* ShowsSearchPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998EDE2720CD4500300CC2 /* ShowsSearchPresenterTest.swift */; };
+		0E998EE12720CD4500300CC2 /* ShowsSearchInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998EDF2720CD4500300CC2 /* ShowsSearchInteractorTest.swift */; };
+		0E998EFF2720DA1700300CC2 /* ListOfShowsResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E998EFE2720DA1700300CC2 /* ListOfShowsResult.json */; };
 		0E9A978D271F623800EE2343 /* PinAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A978C271F623800EE2343 /* PinAuthenticationType.swift */; };
 		0E9A9792271F7B8600EE2343 /* PinAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A9791271F7B8600EE2343 /* PinAuthenticationError.swift */; };
 		0E9A9798271FB7B700EE2343 /* LocalBiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */; };
@@ -80,6 +86,13 @@
 		0E9C0A75271E6FE00041190C /* PinAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A6E271E6FE00041190C /* PinAuthenticationViewController.swift */; };
 		0E9C0A76271E6FE00041190C /* PinAuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C0A71271E6FE00041190C /* PinAuthenticationPresenter.swift */; };
 		0E9C0A7B271E6FF20041190C /* PinAuthentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9C0A7A271E6FF20041190C /* PinAuthentication.storyboard */; };
+		0E9E0D312720E52E00541846 /* SearchShowResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E9E0D302720E52E00541846 /* SearchShowResult.json */; };
+		0E9E0D3A2720F2CE00541846 /* DebouncerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E0D392720F2CE00541846 /* DebouncerMock.swift */; };
+		0E9E0D432720F6C000541846 /* BaseShowCellMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E0D422720F6C000541846 /* BaseShowCellMock.swift */; };
+		0E9E0D4D2720FB1E00541846 /* ShowDetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E0D4B2720FB1E00541846 /* ShowDetailPresenterTest.swift */; };
+		0E9E0D4E2720FB1E00541846 /* ShowDetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E0D4C2720FB1E00541846 /* ShowDetailInteractorTest.swift */; };
+		0E9E0D562720FE9E00541846 /* ShowDetailResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E9E0D552720FE9E00541846 /* ShowDetailResult.json */; };
+		0E9E0D5B2720FF9300541846 /* BaseEpisodeCollectionCellMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E0D5A2720FF9300541846 /* BaseEpisodeCollectionCellMock.swift */; };
 		0EDA493C271B171A00C942D9 /* ShowsSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA4932271B171A00C942D9 /* ShowsSearchProtocols.swift */; };
 		0EDA493E271B171A00C942D9 /* ShowsSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA4937271B171A00C942D9 /* ShowsSearchPresenter.swift */; };
 		0EDA493F271B171A00C942D9 /* ShowsSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA4939271B171A00C942D9 /* ShowsSearchRouter.swift */; };
@@ -147,7 +160,6 @@
 		0E7F0A02271A8A8600E5162A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E7F0A04271A8A8600E5162A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E7F0A09271A8A8600E5162A /* TVMaze AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TVMaze AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E7F0A0D271A8A8600E5162A /* TVMaze_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMaze_AppTests.swift; sourceTree = "<group>"; };
 		0E7F0A0F271A8A8600E5162A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E7F0A14271A8A8600E5162A /* TVMaze AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TVMaze AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7F0A18271A8A8600E5162A /* TVMaze_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMaze_AppUITests.swift; sourceTree = "<group>"; };
@@ -160,6 +172,13 @@
 		0E998E3D272052E000300CC2 /* FavoriteShowsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteShowsListPresenter.swift; sourceTree = "<group>"; };
 		0E998E3F272052E000300CC2 /* FavoriteShowsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteShowsListViewController.swift; sourceTree = "<group>"; };
 		0E998E492720568D00300CC2 /* FavoriteShowsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteShowsList.storyboard; sourceTree = "<group>"; };
+		0E998EB62720C83200300CC2 /* NetworkingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMock.swift; sourceTree = "<group>"; };
+		0E998EBF2720C87500300CC2 /* DataStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreMock.swift; sourceTree = "<group>"; };
+		0E998ECA2720C9F800300CC2 /* LocalShowsDataBaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalShowsDataBaseMock.swift; sourceTree = "<group>"; };
+		0E998ED42720CC5E00300CC2 /* LocalBiometricAuthenticationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBiometricAuthenticationManagerMock.swift; sourceTree = "<group>"; };
+		0E998EDE2720CD4500300CC2 /* ShowsSearchPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsSearchPresenterTest.swift; sourceTree = "<group>"; };
+		0E998EDF2720CD4500300CC2 /* ShowsSearchInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsSearchInteractorTest.swift; sourceTree = "<group>"; };
+		0E998EFE2720DA1700300CC2 /* ListOfShowsResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ListOfShowsResult.json; sourceTree = "<group>"; };
 		0E9A978C271F623800EE2343 /* PinAuthenticationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAuthenticationType.swift; sourceTree = "<group>"; };
 		0E9A9791271F7B8600EE2343 /* PinAuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAuthenticationError.swift; sourceTree = "<group>"; };
 		0E9A9797271FB7B700EE2343 /* LocalBiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBiometricAuthentication.swift; sourceTree = "<group>"; };
@@ -199,6 +218,13 @@
 		0E9C0A6E271E6FE00041190C /* PinAuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAuthenticationViewController.swift; sourceTree = "<group>"; };
 		0E9C0A71271E6FE00041190C /* PinAuthenticationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAuthenticationPresenter.swift; sourceTree = "<group>"; };
 		0E9C0A7A271E6FF20041190C /* PinAuthentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PinAuthentication.storyboard; sourceTree = "<group>"; };
+		0E9E0D302720E52E00541846 /* SearchShowResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchShowResult.json; sourceTree = "<group>"; };
+		0E9E0D392720F2CE00541846 /* DebouncerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebouncerMock.swift; sourceTree = "<group>"; };
+		0E9E0D422720F6C000541846 /* BaseShowCellMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseShowCellMock.swift; sourceTree = "<group>"; };
+		0E9E0D4B2720FB1E00541846 /* ShowDetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailPresenterTest.swift; sourceTree = "<group>"; };
+		0E9E0D4C2720FB1E00541846 /* ShowDetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailInteractorTest.swift; sourceTree = "<group>"; };
+		0E9E0D552720FE9E00541846 /* ShowDetailResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShowDetailResult.json; sourceTree = "<group>"; };
+		0E9E0D5A2720FF9300541846 /* BaseEpisodeCollectionCellMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEpisodeCollectionCellMock.swift; sourceTree = "<group>"; };
 		0EDA4932271B171A00C942D9 /* ShowsSearchProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSearchProtocols.swift; sourceTree = "<group>"; };
 		0EDA4937271B171A00C942D9 /* ShowsSearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSearchPresenter.swift; sourceTree = "<group>"; };
 		0EDA4939271B171A00C942D9 /* ShowsSearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSearchRouter.swift; sourceTree = "<group>"; };
@@ -452,7 +478,9 @@
 		0E7F0A0C271A8A8600E5162A /* TVMaze AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E7F0A0D271A8A8600E5162A /* TVMaze_AppTests.swift */,
+				0E9E0D4A2720FAF200541846 /* ShowDetailTests */,
+				0E998EDD2720CD0A00300CC2 /* ShowsSearchTests */,
+				0E998EDC2720CD0000300CC2 /* Mocks */,
 				0E7F0A0F271A8A8600E5162A /* Info.plist */,
 			);
 			path = "TVMaze AppTests";
@@ -559,6 +587,71 @@
 			children = (
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		0E998EB52720C81C00300CC2 /* NetworkMock */ = {
+			isa = PBXGroup;
+			children = (
+				0E998EE82720D07B00300CC2 /* JSONFiles */,
+				0E998EB62720C83200300CC2 /* NetworkingMock.swift */,
+			);
+			path = NetworkMock;
+			sourceTree = "<group>";
+		};
+		0E998EBE2720C85F00300CC2 /* DataStoreMock */ = {
+			isa = PBXGroup;
+			children = (
+				0E998EBF2720C87500300CC2 /* DataStoreMock.swift */,
+			);
+			path = DataStoreMock;
+			sourceTree = "<group>";
+		};
+		0E998ECF2720C9FE00300CC2 /* DataBaseMock */ = {
+			isa = PBXGroup;
+			children = (
+				0E998ECA2720C9F800300CC2 /* LocalShowsDataBaseMock.swift */,
+			);
+			path = DataBaseMock;
+			sourceTree = "<group>";
+		};
+		0E998ED32720CC5000300CC2 /* BiometricsMock */ = {
+			isa = PBXGroup;
+			children = (
+				0E998ED42720CC5E00300CC2 /* LocalBiometricAuthenticationManagerMock.swift */,
+			);
+			path = BiometricsMock;
+			sourceTree = "<group>";
+		};
+		0E998EDC2720CD0000300CC2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0E9E0D412720F6B300541846 /* CellsMock */,
+				0E9E0D382720F2BE00541846 /* DebouncerMock */,
+				0E998ED32720CC5000300CC2 /* BiometricsMock */,
+				0E998ECF2720C9FE00300CC2 /* DataBaseMock */,
+				0E998EBE2720C85F00300CC2 /* DataStoreMock */,
+				0E998EB52720C81C00300CC2 /* NetworkMock */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0E998EDD2720CD0A00300CC2 /* ShowsSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E998EDE2720CD4500300CC2 /* ShowsSearchPresenterTest.swift */,
+				0E998EDF2720CD4500300CC2 /* ShowsSearchInteractorTest.swift */,
+			);
+			path = ShowsSearchTests;
+			sourceTree = "<group>";
+		};
+		0E998EE82720D07B00300CC2 /* JSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0E998EFE2720DA1700300CC2 /* ListOfShowsResult.json */,
+				0E9E0D302720E52E00541846 /* SearchShowResult.json */,
+				0E9E0D552720FE9E00541846 /* ShowDetailResult.json */,
+			);
+			path = JSONFiles;
 			sourceTree = "<group>";
 		};
 		0E9A9796271FB79500EE2343 /* BiometricsAuthentication */ = {
@@ -811,6 +904,32 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		0E9E0D382720F2BE00541846 /* DebouncerMock */ = {
+			isa = PBXGroup;
+			children = (
+				0E9E0D392720F2CE00541846 /* DebouncerMock.swift */,
+			);
+			path = DebouncerMock;
+			sourceTree = "<group>";
+		};
+		0E9E0D412720F6B300541846 /* CellsMock */ = {
+			isa = PBXGroup;
+			children = (
+				0E9E0D422720F6C000541846 /* BaseShowCellMock.swift */,
+				0E9E0D5A2720FF9300541846 /* BaseEpisodeCollectionCellMock.swift */,
+			);
+			path = CellsMock;
+			sourceTree = "<group>";
+		};
+		0E9E0D4A2720FAF200541846 /* ShowDetailTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E9E0D4B2720FB1E00541846 /* ShowDetailPresenterTest.swift */,
+				0E9E0D4C2720FB1E00541846 /* ShowDetailInteractorTest.swift */,
+			);
+			path = ShowDetailTests;
+			sourceTree = "<group>";
+		};
 		0EDA48FC271B156200C942D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1042,6 +1161,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E9E0D562720FE9E00541846 /* ShowDetailResult.json in Resources */,
+				0E998EFF2720DA1700300CC2 /* ListOfShowsResult.json in Resources */,
+				0E9E0D312720E52E00541846 /* SearchShowResult.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1144,7 +1266,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E7F0A0E271A8A8600E5162A /* TVMaze_AppTests.swift in Sources */,
+				0E9E0D5B2720FF9300541846 /* BaseEpisodeCollectionCellMock.swift in Sources */,
+				0E9E0D4D2720FB1E00541846 /* ShowDetailPresenterTest.swift in Sources */,
+				0E9E0D4E2720FB1E00541846 /* ShowDetailInteractorTest.swift in Sources */,
+				0E998ECB2720C9F800300CC2 /* LocalShowsDataBaseMock.swift in Sources */,
+				0E998EE12720CD4500300CC2 /* ShowsSearchInteractorTest.swift in Sources */,
+				0E998EB72720C83200300CC2 /* NetworkingMock.swift in Sources */,
+				0E998EE02720CD4500300CC2 /* ShowsSearchPresenterTest.swift in Sources */,
+				0E998ED52720CC5E00300CC2 /* LocalBiometricAuthenticationManagerMock.swift in Sources */,
+				0E9E0D432720F6C000541846 /* BaseShowCellMock.swift in Sources */,
+				0E998EC02720C87500300CC2 /* DataStoreMock.swift in Sources */,
+				0E9E0D3A2720F2CE00541846 /* DebouncerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

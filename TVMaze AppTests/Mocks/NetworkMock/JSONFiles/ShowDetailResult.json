@@ -1,0 +1,281 @@
+{
+    "id": 43687,
+    "url": "https://www.tvmaze.com/shows/43687/squid-game",
+    "name": "Squid Game",
+    "type": "Scripted",
+    "language": "Korean",
+    "genres": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+    ],
+    "status": "To Be Determined",
+    "runtime": null,
+    "averageRuntime": 55,
+    "premiered": "2021-09-17",
+    "ended": null,
+    "officialSite": "https://www.netflix.com/title/81040344",
+    "schedule": {
+        "time": "",
+        "days": []
+    },
+    "rating": {
+        "average": 8.1
+    },
+    "weight": 99,
+    "network": null,
+    "webChannel": {
+        "id": 1,
+        "name": "Netflix",
+        "country": null
+    },
+    "dvdCountry": null,
+    "externals": {
+        "tvrage": null,
+        "thetvdb": 383275,
+        "imdb": "tt10919420"
+    },
+    "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/362/906711.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/362/906711.jpg"
+    },
+    "summary": "<p>Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits --- with deadly high stakes.</p>",
+    "updated": 1634676807,
+    "_links": {
+        "self": {
+            "href": "https://api.tvmaze.com/shows/43687"
+        },
+        "previousepisode": {
+            "href": "https://api.tvmaze.com/episodes/2172214"
+        }
+    },
+    "_embedded": {
+        "episodes": [
+            {
+                "id": 2145979,
+                "url": "https://www.tvmaze.com/episodes/2145979/squid-game-1x01-red-light-green-light",
+                "name": "Red Light, Green Light",
+                "season": 1,
+                "number": 1,
+                "type": "regular",
+                "airdate": "2021-09-17",
+                "airtime": "",
+                "airstamp": "2021-09-17T12:00:00+00:00",
+                "runtime": 60,
+                "rating": {
+                    "average": 8.2
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/357/894856.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/357/894856.jpg"
+                },
+                "summary": "<p>Hoping to win easy money, a broke and desperate Ki Hoon agrees to take part in an enigmatic game. Not long into the first round, unforeseen horrors unfold.</p>",
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/episodes/2145979"
+                    }
+                }
+            },
+            {
+                "id": 2146006,
+                "url": "https://www.tvmaze.com/episodes/2146006/squid-game-1x02-hell",
+                "name": "Hell",
+                "season": 1,
+                "number": 2,
+                "type": "regular",
+                "airdate": "2021-09-17",
+                "airtime": "",
+                "airstamp": "2021-09-17T12:00:00+00:00",
+                "runtime": 63,
+                "rating": {
+                    "average": 7.9
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/357/894857.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/357/894857.jpg"
+                },
+                "summary": "<p>Split on whether to continue or quit, the group holds a vote. But their realities in the outside world may prove to be just as unforgiving as the game.</p>",
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/episodes/2146006"
+                    }
+                }
+            },
+            {
+                "id": 2146007,
+                "url": "https://www.tvmaze.com/episodes/2146007/squid-game-1x03-the-man-with-the-umbrella",
+                "name": "The Man with the Umbrella",
+                "season": 1,
+                "number": 3,
+                "type": "regular",
+                "airdate": "2021-09-17",
+                "airtime": "",
+                "airstamp": "2021-09-17T12:00:00+00:00",
+                "runtime": 54,
+                "rating": {
+                    "average": 8.3
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/357/894858.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/357/894858.jpg"
+                },
+                "summary": "<p>A few players enter the next round — which promises equal doses of sweet and deadly — with hidden advantages. Meanwhile, Joon Ho sneaks his way inside.</p>",
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/episodes/2146007"
+                    }
+                }
+            },
+            {
+                "id": 2146008,
+                "url": "https://www.tvmaze.com/episodes/2146008/squid-game-1x04-stick-to-the-team",
+                "name": "Stick to the Team",
+                "season": 1,
+                "number": 4,
+                "type": "regular",
+                "airdate": "2021-09-17",
+                "airtime": "",
+                "airstamp": "2021-09-17T12:00:00+00:00",
+                "runtime": 55,
+                "rating": {
+                    "average": 8.2
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/357/894859.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/357/894859.jpg"
+                },
+                "summary": "<p>As alliances form among the players, no one is safe in the dorm after lights-out. The third game challenges Ki Hoon's team to think strategically.</p>",
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/episodes/2146008"
+                    }
+                }
+            },
+            {
+                "id": 2146009,
+                "url": "https://www.tvmaze.com/episodes/2146009/squid-game-1x05-a-fair-world",
+                "name": "A Fair World",
+                "season": 1,
+                "number": 5,
+                "type": "regular",
+                "airdate": "2021-09-17",
+                "airtime": "",
+                "airstamp": "2021-09-17T12:00:00+00:00",
+                "runtime": 52,
+                "rating": {
+                    "average": 8.4
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/357/894860.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/357/894860.jpg"
+                },
+                "summary": "<p>Ki Hoon and his team take turns keeping guard through the night. The masked men encounter trouble with their co-conspirators.</p>",
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/episodes/2146009"
+                    }
+                }
+            },
+            {
+                "id": 2146010,
+                "url": "https://www.tvmaze.com/episodes/2146010/squid-game-1x06-gganbu",
+                "name": "Gganbu",
+                "season": 1,
+                "number": 6,
+                "type": "regular",
+                "airdate": "2021-09-17",
+                "airtime": "",
+                "airstamp": "2021-09-17T12:00:00+00:00",
+                "runtime": 62,
+                "rating": {
+                    "average": 8.5
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/357/894861.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/357/894861.jpg"
+                },
+                "summary": "<p>Players pair off for the fourth game. Ki Hoon grapples with a moral dilemma, Sang Woo chooses self-preservation and Sae Byuk shares her untold story.</p>",
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/episodes/2146010"
+                    }
+                }
+            },
+            {
+                "id": 2146011,
+                "url": "https://www.tvmaze.com/episodes/2146011/squid-game-1x07-vips",
+                "name": "VIPS",
+                "season": 1,
+                "number": 7,
+                "type": "regular",
+                "airdate": "2021-09-17",
+                "airtime": "",
+                "airstamp": "2021-09-17T12:00:00+00:00",
+                "runtime": 58,
+                "rating": {
+                    "average": 8.3
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/357/894862.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/357/894862.jpg"
+                },
+                "summary": "<p>The Masked Leader welcomes VIP guests to the facility for a front-row viewing of the show. In the fifth game, some players crack under pressure.</p>",
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/episodes/2146011"
+                    }
+                }
+            },
+            {
+                "id": 2146012,
+                "url": "https://www.tvmaze.com/episodes/2146012/squid-game-1x08-front-man",
+                "name": "Front Man",
+                "season": 1,
+                "number": 8,
+                "type": "regular",
+                "airdate": "2021-09-17",
+                "airtime": "",
+                "airstamp": "2021-09-17T12:00:00+00:00",
+                "runtime": 32,
+                "rating": {
+                    "average": 7.8
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/357/894863.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/357/894863.jpg"
+                },
+                "summary": "<p>As finalists, Ki Hoon, Sang Woo and Sae Byuk are given a change of clothes and a fancy dinner. Joon Ho makes it onto another island and calls his chief, but the reception is poor.</p>",
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/episodes/2146012"
+                    }
+                }
+            },
+            {
+                "id": 2172214,
+                "url": "https://www.tvmaze.com/episodes/2172214/squid-game-1x09-one-lucky-day",
+                "name": "One Lucky Day",
+                "season": 1,
+                "number": 9,
+                "type": "regular",
+                "airdate": "2021-09-17",
+                "airtime": "",
+                "airstamp": "2021-09-17T12:00:00+00:00",
+                "runtime": 55,
+                "rating": {
+                    "average": 8
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_landscape/357/894864.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/357/894864.jpg"
+                },
+                "summary": "<p>The final round presents another cruel test — but this time, how it ends depends on just one player. The game's creator steps out of the shadows.</p>",
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/episodes/2172214"
+                    }
+                }
+            }
+        ]
+    }
+}

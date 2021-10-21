@@ -7,12 +7,13 @@
 
 import Foundation
 
-class TextDebouncer {
+typealias ClosureHandler = (String?) -> Void
+
+class TextDebouncer: TextDebouncerProtocol {
     
     var closure: ClosureHandler?
-    typealias ClosureHandler = (String?) -> Void
-    let timeInterval: TimeInterval
-    private(set) var timer: Timer?
+    var timeInterval: TimeInterval
+    var timer: Timer?
     private(set) var currentText: String = String()
     
     init(timeInterval: TimeInterval) {
@@ -26,4 +27,9 @@ class TextDebouncer {
             self?.closure?(self?.currentText)
         })
     }
+}
+
+protocol TextDebouncerProtocol {
+    var closure: ClosureHandler? {get set}
+    func restarInterval(with text: String)
 }

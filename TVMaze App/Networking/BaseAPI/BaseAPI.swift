@@ -9,5 +9,5 @@ import Foundation
 
 protocol BaseAPIProtocol: AnyObject {
     @discardableResult
-    func getRequest<T>(resource: NetworkResource<T>, completion: @escaping (Result<T,Error>) -> Void) -> URLSessionTask
+    func getRequest<T>(resource: NetworkResource<T>, completion: @escaping (Result<T,Error>) -> Void) -> URLSessionTask?
 }

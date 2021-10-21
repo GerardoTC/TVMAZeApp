@@ -1,0 +1,57 @@
+[
+    {
+        "score": 1.2042621,
+        "show": {
+            "id": 43687,
+            "url": "https://www.tvmaze.com/shows/43687/squid-game",
+            "name": "Squid Game",
+            "type": "Scripted",
+            "language": "Korean",
+            "genres": [
+                "Drama",
+                "Thriller",
+                "Mystery"
+            ],
+            "status": "To Be Determined",
+            "runtime": null,
+            "averageRuntime": 55,
+            "premiered": "2021-09-17",
+            "ended": null,
+            "officialSite": "https://www.netflix.com/title/81040344",
+            "schedule": {
+                "time": "",
+                "days": []
+            },
+            "rating": {
+                "average": 8.1
+            },
+            "weight": 99,
+            "network": null,
+            "webChannel": {
+                "id": 1,
+                "name": "Netflix",
+                "country": null
+            },
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": 383275,
+                "imdb": "tt10919420"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/362/906711.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/362/906711.jpg"
+            },
+            "summary": "<p>Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits --- with deadly high stakes.</p>",
+            "updated": 1634676807,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/43687"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/2172214"
+                }
+            }
+        }
+    }
+]
